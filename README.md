@@ -17,13 +17,14 @@ Mayagüez. Built and maintained by StackWorks.
 
 ## Structure
 
-public/            static assets 
+```
+public/            static assets served as-is
 src/
   assets/          images, icons, fonts
   components/      reusable UI components
   pages/           top-level page components
-  styles/          global styles and Tailwind config 
-
+  styles/          global styles and Tailwind config
+```
 
 ## Getting Started
 ```bash
