@@ -154,18 +154,8 @@ Before you request review, confirm all of the following:
 - [ ] It runs locally (`npm run dev`) and you actually looked at it in a browser
 - [ ] `npm run lint` passes with no errors
 - [ ] No errors or warnings in the browser console
-- [ ] The Cloudflare preview URL is pasted in the PR
 - [ ] Your branch is up to date with `main`
 - [ ] The PR links its issue with `Closes #<number>`
-
-### The Cloudflare preview URL
-
-Every PR gets an automatic preview deployment from Cloudflare Pages. A bot
-comment with the preview link appears on the PR a minute or two after you push.
-Copy that URL into the PR description so the Lead can test the real build
-without pulling your branch.
-
----
 
 ## Review and merge
 

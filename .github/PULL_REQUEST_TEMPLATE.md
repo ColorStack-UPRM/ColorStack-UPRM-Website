@@ -9,19 +9,12 @@
 Closes #N
 
 
-## Cloudflare preview URL
-
-<!--
-Paste the preview link from the Cloudflare Pages bot comment below.
-This is used to test before merging.
--->
 
 ## Checklist
 
 - [ ] Ran it locally with `npm run dev` and checked it in a browser
 - [ ] `npm run lint` passes with no errors
 - [ ] No errors or warnings in the browser console
-- [ ] Cloudflare preview URL pasted above
 - [ ] Branch is up to date with `main`
 - [ ] Commits follow Conventional Commits (`feat:`, `fix:`, `docs:`, `chore:`)
 - [ ] This PR covers one issue only
