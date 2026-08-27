@@ -33,12 +33,10 @@ npm run dev
 ```
 
 ## Contributing
-1. Create a branch off `main`: `git checkout -b feat/short-description`
-2. Commit your work and push the branch
-3. Open pull request into `main`
-4. Lead will review and merge | NOBODY pushes to `main` directly
 
-Branch naming: `feat/`, `fix/`, `chore/`, `docs/`
+Before you open your first PR, read [CONTRIBUTING.md](CONTRIBUTING.md) because it covers
+branch naming, commit conventions, and the merge policy. Short version: never push
+to `main`, one issue per branch per PR, and only the Lead merges.
 
 ## Team
  StackWorks - ColorStack UPRM
