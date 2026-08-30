@@ -27,6 +27,11 @@ src/
 ```
 
 ## Getting Started
+
+Read the [Onboarding Guide](docs/ONBOARDING.md) first — it covers required
+tool versions, setup, workflow, and common setup errors. 
+
+The short version:
 ```bash
 npm install
 npm run dev

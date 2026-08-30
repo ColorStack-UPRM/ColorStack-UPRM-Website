@@ -52,6 +52,7 @@ Format:
 | `feature/` | New functionality, new pages, new components       |
 | `fix/`     | Fixing something that is broken                    |
 | `docs/`    | Documentation only — README, this file, comments   |
+| `chore/`   | Tooling, config, dependencies, repo maintenance    |
 
 Rules for the short description: lowercase, words separated by hyphens, three to
 five words max.
