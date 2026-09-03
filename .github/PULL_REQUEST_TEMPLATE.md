@@ -8,8 +8,6 @@
 
 Closes #N
 
-
-
 ## Checklist
 
 - [ ] Ran it locally with `npm run dev` and checked it in a browser

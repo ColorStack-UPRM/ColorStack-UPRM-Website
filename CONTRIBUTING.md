@@ -1,7 +1,7 @@
 # Contributing to the ColorStack UPRM Website
 
 This guide covers how we name branches, write commits, and open pull requests.
-Read it atleast once before your first contribution. 
+Read it atleast once before your first contribution.
 
 ---
 
@@ -36,7 +36,6 @@ Do not bundle unrelated changes into a single PR. If you're working on the Home
 page hero and you notice a typo in the footer, that's a second issue and a
 second PR. Small, focused PRs get reviewed and merged fast. Large mixed PRs are harder to review.
 
-
 ---
 
 ## Branch naming
@@ -47,12 +46,12 @@ Format:
 <type>/<issue-number>-<short-description>
 ```
 
-| Type       | Use it for                                        |
-| ---------- | ------------------------------------------------- |
-| `feature/` | New functionality, new pages, new components       |
-| `fix/`     | Fixing something that is broken                    |
-| `docs/`    | Documentation only — README, this file, comments   |
-| `chore/`   | Tooling, config, dependencies, repo maintenance    |
+| Type       | Use it for                                       |
+| ---------- | ------------------------------------------------ |
+| `feature/` | New functionality, new pages, new components     |
+| `fix/`     | Fixing something that is broken                  |
+| `docs/`    | Documentation only — README, this file, comments |
+| `chore/`   | Tooling, config, dependencies, repo maintenance  |
 
 Rules for the short description: lowercase, words separated by hyphens, three to
 five words max.
@@ -86,12 +85,12 @@ We use [Conventional Commits](https://www.conventionalcommits.org/). Format:
 <type>: <what you did>
 ```
 
-| Type     | Use it for                                                       |
-| -------- | ---------------------------------------------------------------- |
-| `feat:`  | A new feature or user-visible addition                            |
-| `fix:`   | A bug fix                                                         |
-| `docs:`  | Documentation only                                                |
-| `chore:` | Tooling, config, dependencies, cleanup. Nothing user-visible      |
+| Type     | Use it for                                                   |
+| -------- | ------------------------------------------------------------ |
+| `feat:`  | A new feature or user-visible addition                       |
+| `fix:`   | A bug fix                                                    |
+| `docs:`  | Documentation only                                           |
+| `chore:` | Tooling, config, dependencies, cleanup. Nothing user-visible |
 
 Rules:
 
@@ -171,7 +170,6 @@ The Lead will:
 
 If changes are requested, push new commits to the same branch, the PR updates
 automatically. Don't open a new PR.
-
 
 ---
 

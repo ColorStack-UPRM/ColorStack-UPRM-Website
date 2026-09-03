@@ -8,12 +8,12 @@ If something here is wrong, that's a bug. Tell the Lead so the next person doesn
 
 ## 1. Install
 
-| Tool | Version | Check |
-|---|---|---|
-| [Node.js](https://nodejs.org) | 20.19+ | `node -v` |
-| npm | 10+ | `npm -v` |
-| [Git](https://git-scm.com) | Any recent | `git --version` |
-| [VS Code](https://code.visualstudio.com) | Latest | — |
+| Tool                                     | Version    | Check           |
+| ---------------------------------------- | ---------- | --------------- |
+| [Node.js](https://nodejs.org)            | 20.19+     | `node -v`       |
+| npm                                      | 10+        | `npm -v`        |
+| [Git](https://git-scm.com)               | Any recent | `git --version` |
+| [VS Code](https://code.visualstudio.com) | Latest     | —               |
 
 **Node 20 is not optional.** Cloudflare builds on Node 20, and nothing in the repo pins your local version — check `node -v` yourself. Use [nvm](https://github.com/nvm-sh/nvm) if you juggle versions.
 

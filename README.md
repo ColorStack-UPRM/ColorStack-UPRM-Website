@@ -4,11 +4,13 @@ Official website for the ColorStack chapter at the University of Puerto Rico,
 Mayagüez. Built and maintained by StackWorks.
 
 ## Purpose
+
 - Introduce the chapter to students, faculty and sponsors
 - Give prospective members a clear path to join
 - Showcase our events, team and sponsors
 
 ## Stack
+
 - FrameWork: React
 - Build tool: Vite
 - Language: TypeScript
@@ -29,9 +31,10 @@ src/
 ## Getting Started
 
 Read the [Onboarding Guide](docs/ONBOARDING.md) first — it covers required
-tool versions, setup, workflow, and common setup errors. 
+tool versions, setup, workflow, and common setup errors.
 
 The short version:
+
 ```bash
 npm install
 npm run dev
@@ -44,4 +47,5 @@ branch naming, commit conventions, and the merge policy. Short version: never pu
 to `main`, one issue per branch per PR, and only the Lead merges.
 
 ## Team
- StackWorks - ColorStack UPRM
+
+StackWorks - ColorStack UPRM
