@@ -1,1 +1,29 @@
 @import 'tailwindcss';
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/montserrat-variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/montserrat-italic-variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  --color-chapter-green: #008b08;
+  --color-chapter-white: #ffffff;
+
+  --font-chapter: 'Montserrat', sans-serif;
+  --font-stackworks: 'Monolist', monospace;
+}
+
+body {
+  font-family: var(--font-chapter);
+}
