@@ -1,71 +1,71 @@
-import { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
-
-const links = [
-  { to: '/', label: 'Home' },
-  { to: '/about', label: 'About' },
-  { to: '/become-a-member', label: 'Become a Member' },
-  { to: '/sponsors', label: 'Sponsors' },
-  { to: '/events', label: 'Events' },
-]
+import { useRef, useState } from 'react'
+import Brand from './Brand'
+import ButtonLink from './ButtonLink'
+import NavigationLinks from './NavigationLinks'
+import { membershipLink, primaryNavigation } from '../config/navigation'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const toggleRef = useRef<HTMLButtonElement>(null)
+  const closeNavigation = () => setOpen(false)
 
   return (
-    <header className="border-b border-gray-200 bg-white">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-4">
-        <Link
-          to="/"
-          onClick={() => setOpen(false)}
-          className="flex items-center gap-2 font-bold text-chapter-green"
-        >
-          <img
-            src="/1.png"
-            alt=""
-            width={48}
-            height={48}
-            className="h-12 w-12 rounded object-contain"
-          />
-          ColorStack UPRM
-        </Link>
-
-        <button
-          type="button"
-          aria-label={open ? 'Close navigation' : 'Open navigation'}
-          aria-expanded={open}
-          aria-controls="primary-navigation"
-          onClick={() => setOpen(!open)}
-          className="flex h-11 w-11 items-center justify-center rounded border border-gray-300 text-2xl md:hidden"
-        >
-          <span aria-hidden="true">{open ? '✕' : '☰'}</span>
-        </button>
-
+    <header
+      className="border-b border-chapter-green/15 bg-chapter-white"
+      onKeyDown={(event) => {
+        if (event.key === 'Escape' && open) {
+          closeNavigation()
+          toggleRef.current?.focus()
+        }
+      }}
+    >
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex min-h-20 items-center justify-between gap-4 py-3">
+          <Brand onClick={closeNavigation} />
+          <ButtonLink to={membershipLink.to} className="hidden lg:inline-flex">
+            {membershipLink.label}
+          </ButtonLink>
+          <button
+            ref={toggleRef}
+            type="button"
+            aria-label={open ? 'Close navigation' : 'Open navigation'}
+            aria-expanded={open}
+            aria-controls="primary-navigation"
+            onClick={() => setOpen(!open)}
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-chapter-green/20 text-chapter-green hover:bg-chapter-green/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-chapter-green lg:hidden"
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              aria-hidden="true"
+            >
+              <path
+                d={open ? 'M6 6l12 12M6 18L18 6' : 'M4 6h16M4 12h16M4 18h16'}
+              />
+            </svg>
+          </button>
+        </div>
         <nav
           id="primary-navigation"
           aria-label="Primary"
-          className={`${open ? 'block' : 'hidden'} w-full md:block md:w-auto`}
+          className={`${open ? 'block' : 'hidden'} border-t border-chapter-green/10 pb-4 lg:block lg:border-0 lg:pb-3`}
         >
-          <ul className="flex flex-col gap-1 md:flex-row md:flex-wrap">
-            {links.map(({ to, label }) => (
-              <li key={to}>
-                <NavLink
-                  to={to}
-                  end
-                  onClick={() => setOpen(false)}
-                  className={({ isActive }) =>
-                    `block rounded px-3 py-3 ${
-                      isActive
-                        ? 'bg-chapter-green font-semibold text-white underline underline-offset-4'
-                        : 'text-gray-700 hover:bg-gray-100'
-                    }`
-                  }
-                >
-                  {label}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
+          <NavigationLinks
+            items={primaryNavigation}
+            onNavigate={closeNavigation}
+          />
+          <ButtonLink
+            to={membershipLink.to}
+            onClick={closeNavigation}
+            className="mt-4 w-full lg:hidden"
+          >
+            {membershipLink.label}
+          </ButtonLink>
         </nav>
       </div>
     </header>

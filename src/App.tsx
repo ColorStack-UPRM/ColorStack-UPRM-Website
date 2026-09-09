@@ -6,6 +6,8 @@ import BecomeMember from './pages/BecomeMember'
 import Sponsors from './pages/Sponsors'
 import Events from './pages/Events'
 import NotFound from './pages/NotFound'
+import WhatWeDo from './pages/WhatWeDo'
+import Initiatives from './pages/Initiatives'
 
 export default function App() {
   return (
@@ -17,6 +19,8 @@ export default function App() {
           <Route path="become-a-member" element={<BecomeMember />} />
           <Route path="sponsors" element={<Sponsors />} />
           <Route path="events" element={<Events />} />
+          <Route path="what-we-do" element={<WhatWeDo />} />
+          <Route path="initiatives" element={<Initiatives />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

@@ -19,6 +19,7 @@
 @theme {
   --color-chapter-green: #008b08;
   --color-chapter-white: #ffffff;
+  --color-chapter-dark: #06130e;
 
   --font-chapter: 'Montserrat', sans-serif;
   --font-stackworks: 'Monolist', monospace;
