@@ -1,3 +1,10 @@
+import { useTranslation } from '../i18n/useTranslation'
+
 export default function Initiatives() {
-  return <h1 className="text-3xl font-bold text-chapter-green">Initiatives</h1>
+  const { t } = useTranslation()
+  return (
+    <h1 className="text-3xl font-bold text-chapter-green">
+      {t('initiatives')}
+    </h1>
+  )
 }

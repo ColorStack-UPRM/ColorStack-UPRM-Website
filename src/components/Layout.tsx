@@ -1,17 +1,25 @@
+import { useTranslation } from '../i18n/useTranslation'
 import { Outlet, useLocation } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import { membershipLink, primaryNavigation } from '../config/navigation'
 
 export default function Layout() {
+  const { t } = useTranslation()
   const location = useLocation()
+  const pathname = location.pathname.replace(/\/+$/, '').toLowerCase() || '/'
+  const titleKey =
+    [...primaryNavigation, membershipLink].find(({ to }) => to === pathname)
+      ?.label ?? 'notFound'
 
   return (
     <div className="flex min-h-dvh flex-col bg-chapter-white text-gray-900">
+      <title>{`${t(titleKey)} | ColorStack UPRM`}</title>
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:z-10 focus:bg-white focus:p-4"
       >
-        Skip to content
+        {t('skipContent')}
       </a>
 
       <Navbar key={location.key} />

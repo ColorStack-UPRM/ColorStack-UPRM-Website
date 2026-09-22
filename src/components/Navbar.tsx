@@ -1,3 +1,5 @@
+import LanguageToggle from './LanguageToggle'
+import { useTranslation } from '../i18n/useTranslation'
 import { useRef, useState } from 'react'
 import Brand from './Brand'
 import ButtonLink from './ButtonLink'
@@ -5,6 +7,7 @@ import NavigationLinks from './NavigationLinks'
 import { membershipLink, primaryNavigation } from '../config/navigation'
 
 export default function Navbar() {
+  const { t } = useTranslation()
   const [open, setOpen] = useState(false)
   const toggleRef = useRef<HTMLButtonElement>(null)
   const closeNavigation = () => setOpen(false)
@@ -20,39 +23,44 @@ export default function Navbar() {
       }}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex min-h-20 items-center justify-between gap-4 py-3">
+        <div className="flex min-h-20 flex-wrap items-center justify-between gap-2 py-3">
           <Brand onClick={closeNavigation} />
-          <ButtonLink to={membershipLink.to} className="hidden lg:inline-flex">
-            {membershipLink.label}
-          </ButtonLink>
-          <button
-            ref={toggleRef}
-            type="button"
-            aria-label={open ? 'Close navigation' : 'Open navigation'}
-            aria-expanded={open}
-            aria-controls="primary-navigation"
-            onClick={() => setOpen(!open)}
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-chapter-green/20 text-chapter-green hover:bg-chapter-green/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-chapter-green lg:hidden"
-          >
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              aria-hidden="true"
+          <div className="ml-auto flex items-center gap-2 sm:gap-4">
+            <LanguageToggle />
+            <div className="hidden lg:block">
+              <ButtonLink to={membershipLink.to}>
+                {t(membershipLink.label)}
+              </ButtonLink>
+            </div>
+            <button
+              ref={toggleRef}
+              type="button"
+              aria-label={t(open ? 'closeNavigation' : 'openNavigation')}
+              aria-expanded={open}
+              aria-controls="primary-navigation"
+              onClick={() => setOpen(!open)}
+              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-chapter-green/20 text-chapter-green hover:bg-chapter-green/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-chapter-green lg:hidden"
             >
-              <path
-                d={open ? 'M6 6l12 12M6 18L18 6' : 'M4 6h16M4 12h16M4 18h16'}
-              />
-            </svg>
-          </button>
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                aria-hidden="true"
+              >
+                <path
+                  d={open ? 'M6 6l12 12M6 18L18 6' : 'M4 6h16M4 12h16M4 18h16'}
+                />
+              </svg>
+            </button>
+          </div>
         </div>
         <nav
           id="primary-navigation"
-          aria-label="Primary"
+          aria-label={t('primaryNavigation')}
           className={`${open ? 'block' : 'hidden'} border-t border-chapter-green/10 pb-4 lg:block lg:border-0 lg:pb-3`}
         >
           <NavigationLinks
@@ -64,7 +72,7 @@ export default function Navbar() {
             onClick={closeNavigation}
             className="mt-4 w-full lg:hidden"
           >
-            {membershipLink.label}
+            {t(membershipLink.label)}
           </ButtonLink>
         </nav>
       </div>

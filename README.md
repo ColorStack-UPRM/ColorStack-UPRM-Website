@@ -46,6 +46,8 @@ Before you open your first PR, read [CONTRIBUTING.md](CONTRIBUTING.md) because i
 branch naming, commit conventions, and the merge policy. Short version: never push
 to `main`, one issue per branch per PR, and only the Lead merges.
 
+For bilingual content, see [Adding translations](docs/TRANSLATIONS.md).
+
 ## Team
 
 StackWorks - ColorStack UPRM

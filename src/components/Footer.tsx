@@ -1,3 +1,4 @@
+import { useTranslation } from '../i18n/useTranslation'
 import { Link } from 'react-router-dom'
 import { membershipLink, primaryNavigation } from '../config/navigation'
 import FooterColumn from './FooterColumn'
@@ -10,6 +11,7 @@ const linkClassName =
   'inline-block py-1 text-sm text-white/70 hover:text-white hover:underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white'
 
 export default function Footer() {
+  const { t } = useTranslation()
   return (
     <footer className="bg-chapter-dark text-chapter-white">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
@@ -23,20 +25,19 @@ export default function Footer() {
         </p>
 
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:gap-12">
-          <FooterColumn title="The Chapter">
+          <FooterColumn title={t('chapter')}>
             <p className="max-w-xs text-sm leading-7 text-white/70">
-              ColorStack student chapter at the University of Puerto Rico,
-              Mayagüez. Built and maintained by StackWorks.
+              {t('chapterDescription')}
             </p>
           </FooterColumn>
 
-          <FooterColumn title="Navigation">
-            <nav aria-label="Footer">
+          <FooterColumn title={t('navigation')}>
+            <nav aria-label={t('footerNavigation')}>
               <ul className="space-y-2">
                 {[...primaryNavigation, membershipLink].map(({ to, label }) => (
                   <li key={to}>
                     <Link to={to} className={linkClassName}>
-                      {label}
+                      {t(label)}
                     </Link>
                   </li>
                 ))}
@@ -44,7 +45,7 @@ export default function Footer() {
             </nav>
           </FooterColumn>
 
-          <FooterColumn title="Community">
+          <FooterColumn title={t('community')}>
             <ul className="space-y-2">
               {communityLinks.map(({ href, label }) => (
                 <li key={href}>
@@ -56,11 +57,11 @@ export default function Footer() {
             </ul>
           </FooterColumn>
 
-          <FooterColumn title="Companies">
+          <FooterColumn title={t('companies')}>
             <ul className="space-y-2">
               <li>
                 <Link to="/sponsors" className={linkClassName}>
-                  Become a Sponsor
+                  {t('becomeSponsor')}
                 </Link>
               </li>
               <li>
@@ -75,7 +76,7 @@ export default function Footer() {
         <div className="mt-12 flex flex-col gap-4 border-t border-white/15 pt-6 text-[10px] font-medium tracking-widest text-white/60 uppercase sm:mt-16 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} ColorStack UPRM</p>
           <p>Mayagüez, Puerto Rico</p>
-          <p>Built by StackWorks</p>
+          <p>{t('builtBy')}</p>
         </div>
       </div>
     </footer>

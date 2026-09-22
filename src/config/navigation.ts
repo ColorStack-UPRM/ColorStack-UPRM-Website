@@ -1,15 +1,15 @@
 import type { NavigationItem } from '../components/NavigationLinks'
 
 export const primaryNavigation = [
-  { to: '/', label: 'Home' },
-  { to: '/about', label: 'About' },
-  { to: '/what-we-do', label: 'What We Do' },
-  { to: '/initiatives', label: 'Initiatives' },
-  { to: '/events', label: 'Events' },
-  { to: '/sponsors', label: 'Sponsors' },
+  { to: '/', label: 'home' },
+  { to: '/about', label: 'about' },
+  { to: '/what-we-do', label: 'whatWeDo' },
+  { to: '/initiatives', label: 'initiatives' },
+  { to: '/events', label: 'events' },
+  { to: '/sponsors', label: 'sponsors' },
 ] satisfies NavigationItem[]
 
 export const membershipLink = {
   to: '/become-a-member',
-  label: 'Become a Member',
+  label: 'membership',
 } satisfies NavigationItem
