@@ -1,8 +1,10 @@
+import type { TranslationKey } from '../i18n/es'
+import { useTranslation } from '../i18n/useTranslation'
 import { NavLink } from 'react-router-dom'
 
 export type NavigationItem = {
   to: string
-  label: string
+  label: TranslationKey
 }
 
 type NavigationLinksProps = {
@@ -16,6 +18,7 @@ export default function NavigationLinks({
   onNavigate,
   className = '',
 }: NavigationLinksProps) {
+  const { t } = useTranslation()
   return (
     <ul
       className={`flex flex-col gap-1 lg:flex-row lg:items-center lg:justify-between lg:gap-6 ${className}`}
@@ -32,7 +35,7 @@ export default function NavigationLinks({
           >
             {({ isActive }) => (
               <>
-                {label}
+                {t(label)}
                 <span
                   aria-hidden="true"
                   className={`absolute right-0 bottom-1 left-0 h-0.5 origin-left bg-chapter-green transition-transform motion-reduce:transition-none ${isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}

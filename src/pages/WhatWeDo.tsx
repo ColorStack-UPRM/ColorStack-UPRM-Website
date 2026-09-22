@@ -1,3 +1,8 @@
+import { useTranslation } from '../i18n/useTranslation'
+
 export default function WhatWeDo() {
-  return <h1 className="text-3xl font-bold text-chapter-green">What We Do</h1>
+  const { t } = useTranslation()
+  return (
+    <h1 className="text-3xl font-bold text-chapter-green">{t('whatWeDo')}</h1>
+  )
 }

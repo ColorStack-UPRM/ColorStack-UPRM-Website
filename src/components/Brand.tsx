@@ -1,3 +1,4 @@
+import { useTranslation } from '../i18n/useTranslation'
 import { Link } from 'react-router-dom'
 
 type BrandProps = {
@@ -6,11 +7,12 @@ type BrandProps = {
 }
 
 export default function Brand({ onClick, className = '' }: BrandProps) {
+  const { t } = useTranslation()
   return (
     <Link
       to="/"
       onClick={onClick}
-      aria-label="ColorStack UPRM home"
+      aria-label={t('brandHome')}
       className={`inline-flex shrink-0 items-center gap-3 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-chapter-green ${className}`}
     >
       <img
@@ -25,7 +27,7 @@ export default function Brand({ onClick, className = '' }: BrandProps) {
           COLORSTACK
         </span>
         <span className="text-[10px] font-semibold tracking-[0.25em] text-gray-600">
-          UPRM CHAPTER
+          {t('chapterLabel')}
         </span>
       </span>
     </Link>
