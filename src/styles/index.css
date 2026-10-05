@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('/fonts/montserrat-variable.ttf') format('truetype');
+  src: url('/fonts/montserrat-variable.woff2') format('woff2');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('/fonts/montserrat-italic-variable.ttf') format('truetype');
+  src: url('/fonts/montserrat-italic-variable.woff2') format('woff2');
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
