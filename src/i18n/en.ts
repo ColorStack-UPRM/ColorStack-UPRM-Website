@@ -29,4 +29,13 @@ export const en = {
   becomeSponsor: 'Become a Sponsor',
   builtBy: 'Built by StackWorks',
   description: 'ColorStack UPRM | Mayagüez Chapter of ColorStack.',
+
+  // Hero text section
+  campus: 'UNIVERSITY OF PUERTO RICO AT MAYAGÜEZ',
+  goal: 'FROM UPRM TO INDUSTRY',
+  whoWeAre: 'We’re the ColorStack chapter at RUM: computer science students who prepare together for their first internship and for what comes next.',
+  entry: 'OPEN TO ALL UPRM STUDENTS',
+  meetings: 'BIWEEKLY MEETINGS',
+  cost: 'FREE TO JOIN',
+  heroSponsor: 'Sponsor Our Chapter',
 } satisfies Record<TranslationKey, string>

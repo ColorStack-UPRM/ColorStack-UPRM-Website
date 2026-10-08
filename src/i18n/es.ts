@@ -27,6 +27,16 @@ export const es = {
   becomeSponsor: 'Auspicia el capítulo',
   builtBy: 'Creado por StackWorks',
   description: 'ColorStack UPRM | Capítulo de ColorStack en Mayagüez.',
+
+  // Hero text section
+  campus: 'RECINTO UNIVERSITARIO DE MAYAGÜEZ',
+  goal: 'DEL COLEGIO A LA INDUSTRIA',
+  whoWeAre: 
+    'Somos el capítulo de ColorStack en el RUM: estudiantes de computación que se preparan juntos para el primer internship y para lo que viene después.',
+  entry: 'ENTRADA ABIERTA A TODO EL COLEGIO',
+  meetings: 'REUNIONES CADA DOS SEMANAS',
+  cost: 'SIN COSTO',
+  heroSponsor: 'Auspicia el capítulo',
 }
 
 export type TranslationKey = keyof typeof es
