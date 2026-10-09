@@ -13,11 +13,11 @@ export default function Layout() {
       ?.label ?? 'notFound'
 
   return (
-    <div className="flex min-h-dvh flex-col bg-chapter-white text-gray-900">
+    <div className="flex min-h-dvh flex-col bg-chapter-white text-ink">
       <title>{`${t(titleKey)} | ColorStack UPRM`}</title>
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:z-10 focus:bg-white focus:p-4"
+        className="sr-only focus:not-sr-only focus:absolute focus:z-10 focus:bg-chapter-white focus:p-4"
       >
         {t('skipContent')}
       </a>

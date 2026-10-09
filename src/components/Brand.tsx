@@ -26,7 +26,7 @@ export default function Brand({ onClick, className = '' }: BrandProps) {
         <span className="text-lg leading-none font-extrabold tracking-tight text-chapter-green sm:text-2xl">
           COLORSTACK
         </span>
-        <span className="text-[10px] font-semibold tracking-[0.25em] text-gray-600">
+        <span className="text-[10px] font-semibold tracking-[0.25em] text-ink-subtle">
           {t('chapterLabel')}
         </span>
       </span>
