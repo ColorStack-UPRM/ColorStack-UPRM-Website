@@ -28,14 +28,16 @@ export type ButtonProps =
   | ActionButtonProps
 
 const variantStyles: Record<ButtonVariant, string> = {
-  coral: 'bg-chapter-coral text-chapter-dark hover:bg-chapter-coral/90',
+  coral:
+    'bg-accent text-chapter-dark hover:bg-accent/90 focus-visible:outline-current',
   outline:
-    'border border-current bg-transparent text-current hover:bg-current/10',
-  header: 'bg-chapter-green text-white hover:bg-chapter-green/90',
+    'border border-current bg-transparent text-current hover:bg-current/10 focus-visible:outline-current',
+  header:
+    'bg-chapter-green text-chapter-white hover:bg-chapter-green/90 focus-visible:outline-chapter-green',
 }
 
 const baseStyles =
-  'inline-flex min-h-11 items-center justify-center rounded-full px-6 py-3 text-center text-xs font-bold tracking-wider uppercase transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current motion-reduce:transition-none'
+  'inline-flex min-h-11 items-center justify-center rounded-full px-6 py-3 text-center text-xs font-bold tracking-wider uppercase transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 motion-reduce:transition-none'
 
 export default function Button(props: ButtonProps) {
   const { variant = 'coral', className = '', children } = props
