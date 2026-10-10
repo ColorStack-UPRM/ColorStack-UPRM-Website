@@ -36,7 +36,6 @@ export const en = {
   whoWeAre:
     'We’re the ColorStack chapter at RUM: computer science students who prepare together for their first internship and for what comes next.',
   entry: 'OPEN TO ALL UPRM STUDENTS',
-  meetings: 'MEETINGS EVERY TWO WEEKS',
   cost: 'FREE TO JOIN',
   heroSponsor: 'Sponsor Our Chapter',
 } satisfies Record<TranslationKey, string>

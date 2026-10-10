@@ -46,7 +46,7 @@ export default function Home() {
         </div>
 
         <ul className="grid max-w-xl list-disc grid-cols-1 gap-x-6 gap-y-3 pl-5 pt-2 marker:text-chapter-green sm:grid-cols-2">
-          {[t('entry'), t('cost'), t('meetings')].map((item) => (
+          {[t('entry'), t('cost')].map((item) => (
             <li
               className="min-w-0 font-stackworks text-[0.65rem] font-medium tracking-widest text-sage-700 uppercase sm:text-xs"
               key={item}

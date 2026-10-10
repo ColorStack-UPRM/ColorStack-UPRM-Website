@@ -34,7 +34,6 @@ export const es = {
   whoWeAre:
     'Somos el capítulo de ColorStack en el RUM: estudiantes de computación que se preparan juntos para el primer internship y para lo que viene después.',
   entry: 'ENTRADA ABIERTA A TODO EL COLEGIO',
-  meetings: 'REUNIONES CADA DOS SEMANAS',
   cost: 'SIN COSTO',
   heroSponsor: 'Auspicia el capítulo',
 }
