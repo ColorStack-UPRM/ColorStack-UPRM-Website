@@ -9,7 +9,7 @@ const communityLinks = [
 ]
 
 const linkClassName =
-  'inline-block py-1 text-sm text-white/70 hover:text-white hover:underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white'
+  'inline-block py-1 text-sm text-chapter-white/70 hover:text-chapter-white hover:underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-chapter-white'
 
 export default function Footer() {
   const { t } = useTranslation()
@@ -27,7 +27,7 @@ export default function Footer() {
 
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:gap-12">
           <FooterColumn title={t('chapter')}>
-            <p className="max-w-xs text-sm leading-7 text-white/70">
+            <p className="max-w-xs text-sm leading-7 text-chapter-white/70">
               {t('chapterDescription')}
             </p>
           </FooterColumn>
@@ -74,7 +74,7 @@ export default function Footer() {
           </FooterColumn>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-white/15 pt-6 text-[10px] font-medium tracking-widest text-white/60 uppercase sm:mt-16 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-4 border-t border-chapter-white/15 pt-6 text-[10px] font-medium tracking-widest text-chapter-white/60 uppercase sm:mt-16 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} ColorStack UPRM</p>
           <p>Mayagüez, Puerto Rico</p>
           <p>{t('builtBy')}</p>

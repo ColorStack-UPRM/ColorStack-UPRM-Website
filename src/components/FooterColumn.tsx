@@ -9,7 +9,10 @@ type FooterColumnProps = {
 export default function FooterColumn({ title, children }: FooterColumnProps) {
   return (
     <section>
-      <Heading level={3} className="mb-5 text-xs font-semibold tracking-widest text-white/70 uppercase">
+      <Heading
+        level={3}
+        className="mb-5 text-xs font-semibold tracking-widest text-white/70 uppercase"
+      >
         {title}
       </Heading>
       {children}
