@@ -2,7 +2,8 @@ import LanguageToggle from './LanguageToggle'
 import { useTranslation } from '../i18n/useTranslation'
 import { useRef, useState } from 'react'
 import Brand from './Brand'
-import ButtonLink from './ButtonLink'
+import Button from './Button'
+import Container from './Container'
 import NavigationLinks from './NavigationLinks'
 import { membershipLink, primaryNavigation } from '../config/navigation'
 
@@ -22,15 +23,15 @@ export default function Navbar() {
         }
       }}
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <Container>
         <div className="flex min-h-20 flex-wrap items-center justify-between gap-2 py-3">
           <Brand onClick={closeNavigation} />
           <div className="ml-auto flex items-center gap-2 sm:gap-4">
             <LanguageToggle />
             <div className="hidden lg:block">
-              <ButtonLink to={membershipLink.to}>
+              <Button variant="header" to={membershipLink.to}>
                 {t(membershipLink.label)}
-              </ButtonLink>
+              </Button>
             </div>
             <button
               ref={toggleRef}
@@ -67,15 +68,16 @@ export default function Navbar() {
             items={primaryNavigation}
             onNavigate={closeNavigation}
           />
-          <ButtonLink
+          <Button
+            variant="header"
             to={membershipLink.to}
             onClick={closeNavigation}
             className="mt-4 w-full lg:hidden"
           >
             {t(membershipLink.label)}
-          </ButtonLink>
+          </Button>
         </nav>
-      </div>
+      </Container>
     </header>
   )
 }

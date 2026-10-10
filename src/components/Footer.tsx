@@ -2,6 +2,7 @@ import { useTranslation } from '../i18n/useTranslation'
 import { Link } from 'react-router-dom'
 import { membershipLink, primaryNavigation } from '../config/navigation'
 import FooterColumn from './FooterColumn'
+import Container from './Container'
 
 const communityLinks = [
   { label: 'Instagram', href: 'https://www.instagram.com/colorstackuprm/' },
@@ -14,7 +15,7 @@ export default function Footer() {
   const { t } = useTranslation()
   return (
     <footer className="bg-chapter-dark text-chapter-white">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+      <Container className="py-12 sm:py-16">
         <p
           aria-label="ColorStack UPRM"
           className="mb-12 text-[clamp(2rem,8.5vw,7rem)] leading-[0.95] font-extrabold tracking-tighter sm:mb-16"
@@ -78,7 +79,7 @@ export default function Footer() {
           <p>Mayagüez, Puerto Rico</p>
           <p>{t('builtBy')}</p>
         </div>
-      </div>
+      </Container>
     </footer>
   )
 }

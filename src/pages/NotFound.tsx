@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 
 import { useTranslation } from '../i18n/useTranslation'
+import Heading from '../components/Heading'
 
 export default function NotFound() {
   const { t } = useTranslation()
   return (
     <>
-      <h1 className="text-3xl font-bold text-chapter-green">{t('notFound')}</h1>
+      <Heading level={1}>{t('notFound')}</Heading>
       <Link
         to="/"
         className="mt-6 inline-block text-chapter-green underline underline-offset-4"
