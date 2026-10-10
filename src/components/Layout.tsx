@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import { membershipLink, primaryNavigation } from '../config/navigation'
+import Container from './Container'
 
 export default function Layout() {
   const { t } = useTranslation()
@@ -24,12 +25,10 @@ export default function Layout() {
 
       <Navbar key={location.key} />
 
-      <main
-        id="main-content"
-        tabIndex={-1}
-        className="mx-auto w-full max-w-7xl flex-1 px-4 py-12"
-      >
-        <Outlet />
+      <main id="main-content" tabIndex={-1} className="flex flex-1 py-12">
+        <Container>
+          <Outlet />
+        </Container>
       </main>
 
       <Footer />

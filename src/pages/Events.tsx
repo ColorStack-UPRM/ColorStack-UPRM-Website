@@ -1,8 +1,9 @@
 import { useTranslation } from '../i18n/useTranslation'
+import Heading from '../components/Heading'
 
 export default function Events() {
   const { t } = useTranslation()
   return (
-    <h1 className="text-3xl font-bold text-chapter-green">{t('events')}</h1>
+    <Heading level={1}>{t('events')}</Heading>
   )
 }

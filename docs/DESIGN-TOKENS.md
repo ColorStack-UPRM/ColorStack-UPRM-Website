@@ -12,6 +12,43 @@ classes: `--color-chapter-green` gives you `bg-chapter-green`,
 For transparency, use Tailwind's opacity modifier on a token, like
 `text-chapter-white/70`, instead of adding a new token.
 
+## Shared component examples
+
+Use the shared layout and typography components instead of repeating their
+classes in each page:
+
+```tsx
+import Button from '../components/Button'
+import Container from '../components/Container'
+import Heading from '../components/Heading'
+
+export default function ExampleSection() {
+  return (
+    <Container as="section" className="py-12">
+      <Heading level={1}>Upcoming events</Heading>
+      <Heading level={2} className="mt-8">
+        Join the community
+      </Heading>
+
+      <div className="mt-6 flex gap-4">
+        <Button to="/events">Explore events</Button>
+        <Button variant="outline" href="https://example.com">
+          Learn more
+        </Button>
+        <Button variant="header" type="button">
+          Join now
+        </Button>
+      </div>
+    </Container>
+  )
+}
+```
+
+`Container` supplies the shared max-width and horizontal padding; `as` can be
+`div` or `section`. `Heading` takes a semantic `level` of 1, 2, or 3. `Button`
+renders a router link with `to`, an external link with `href`, or a native
+button when neither is provided. Its variants are `coral`, `outline`, and `header`.
+
 ---
 
 ## Colors
