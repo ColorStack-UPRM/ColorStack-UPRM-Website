@@ -33,9 +33,10 @@ export const en = {
   // Hero text section
   campus: 'UNIVERSITY OF PUERTO RICO AT MAYAGÜEZ',
   goal: 'FROM UPRM TO INDUSTRY',
-  whoWeAre: 'We’re the ColorStack chapter at RUM: computer science students who prepare together for their first internship and for what comes next.',
+  whoWeAre:
+    'We’re the ColorStack chapter at RUM: computer science students who prepare together for their first internship and for what comes next.',
   entry: 'OPEN TO ALL UPRM STUDENTS',
-  meetings: 'BIWEEKLY MEETINGS',
+  meetings: 'MEETINGS EVERY TWO WEEKS',
   cost: 'FREE TO JOIN',
   heroSponsor: 'Sponsor Our Chapter',
 } satisfies Record<TranslationKey, string>

@@ -30,7 +30,7 @@ export default function NavigationLinks({
             end
             onClick={onNavigate}
             className={({ isActive }) =>
-              `group relative flex min-h-12 items-center py-3 text-xs font-bold tracking-widest uppercase transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-chapter-green motion-reduce:transition-none ${isActive ? 'text-chapter-green' : 'text-gray-700 hover:text-chapter-green'}`
+              `group relative flex min-h-12 items-center py-3 text-xs font-bold tracking-widest uppercase transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-chapter-green motion-reduce:transition-none ${isActive ? 'text-chapter-green' : 'text-ink-muted hover:text-chapter-green'}`
             }
           >
             {({ isActive }) => (
