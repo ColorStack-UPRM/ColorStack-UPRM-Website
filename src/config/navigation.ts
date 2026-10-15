@@ -1,11 +1,28 @@
-import type { NavigationItem } from '../components/NavigationLinks'
+import type { TranslationKey } from '../i18n/es'
+
+export type NavigationItem = {
+  to: string
+  label: TranslationKey
+}
+
+type HomeSection = {
+  id: string
+  label: TranslationKey
+  available: boolean
+}
+
+export const homeSections = [
+  { id: 'about', label: 'about', available: false },
+  { id: 'what-we-do', label: 'whatWeDo', available: false },
+  { id: 'initiatives', label: 'initiatives', available: false },
+  { id: 'events', label: 'events', available: false },
+] satisfies HomeSection[]
 
 export const primaryNavigation = [
   { to: '/', label: 'home' },
-  { to: '/about', label: 'about' },
-  { to: '/what-we-do', label: 'whatWeDo' },
-  { to: '/initiatives', label: 'initiatives' },
-  { to: '/events', label: 'events' },
+  ...homeSections
+    .filter((section) => section.available)
+    .map(({ id, label }) => ({ to: `/#${id}`, label })),
   { to: '/sponsors', label: 'sponsors' },
 ] satisfies NavigationItem[]
 

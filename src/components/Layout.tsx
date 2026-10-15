@@ -1,6 +1,7 @@
 import { useTranslation } from '../i18n/useTranslation'
 import { Outlet, useLocation } from 'react-router-dom'
 import Navbar from './Navbar'
+import ScrollToAnchor from './ScrollToAnchor'
 import Footer from './Footer'
 import { membershipLink, primaryNavigation } from '../config/navigation'
 import Container from './Container'
@@ -18,11 +19,12 @@ export default function Layout() {
       <title>{`${t(titleKey)} | ColorStack UPRM`}</title>
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:z-10 focus:bg-chapter-white focus:p-4"
+        className="sr-only focus:not-sr-only focus:absolute focus:z-30 focus:bg-chapter-white focus:p-4"
       >
         {t('skipContent')}
       </a>
 
+      <ScrollToAnchor />
       <Navbar key={location.key} />
 
       <main id="main-content" tabIndex={-1} className="flex flex-1 py-12">
