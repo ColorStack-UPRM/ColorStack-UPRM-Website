@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <header
-      className="border-b border-chapter-green/15 bg-chapter-white"
+      className="sticky top-0 z-20 border-b border-chapter-green/15 bg-chapter-white"
       onKeyDown={(event) => {
         if (event.key === 'Escape' && open) {
           closeNavigation()
