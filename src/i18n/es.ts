@@ -36,6 +36,24 @@ export const es = {
   entry: 'ENTRADA ABIERTA A TODO EL COLEGIO',
   cost: 'SIN COSTO',
   heroSponsor: 'Auspicia el capítulo',
+
+  // Hero cards
+  heroCardGetTitle: 'Consigue',
+  heroCardGetTag: 'Meta',
+  heroCardGetDescription:
+    'Résumé listo, referidos y práctica de entrevistas hasta que llegue la oferta.',
+  heroCardConnectTitle: 'Conecta',
+  heroCardConnectTag: 'Red',
+  heroCardConnectDescription:
+    'Mentoría de egresados, charlas con empresas y la red nacional de ColorStack.',
+  heroCardBuildTitle: 'Construye',
+  heroCardBuildTag: 'Proyectos',
+  heroCardBuildDescription:
+    'StackWorks es donde las ideas del capítulo se vuelven proyectos reales. Este website es el primero.',
+  heroCardLearnTitle: 'Aprende',
+  heroCardLearnTag: 'Base',
+  heroCardLearnDescription:
+    'Talleres de Git, estructuras de datos y entrevistas técnicas, dados por gente que ya pasó por ahí.',
 }
 
 export type TranslationKey = keyof typeof es
