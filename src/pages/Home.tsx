@@ -1,5 +1,7 @@
 import { useTranslation } from '../i18n/useTranslation'
 import Button from '../components/Button'
+import HeroCards from '../components/HeroCards'
+import { heroCards } from '../config/heroCards'
 
 export default function Home() {
   const { t } = useTranslation()
@@ -11,7 +13,7 @@ export default function Home() {
   const lastWord = lastSpace >= 0 ? headline.slice(lastSpace + 1) : headline
 
   return (
-    <section className="flex min-h-[55vh] w-full items-center py-10 sm:py-14 lg:py-16">
+    <section className="grid min-h-[55vh] w-full items-center gap-12 py-10 sm:py-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] lg:py-16">
       <div className="w-full max-w-2xl space-y-6 sm:space-y-8">
         <p className="flex items-center gap-3 font-stackworks text-[0.65rem] font-semibold tracking-[0.18em] text-sage-700 uppercase sm:text-xs">
           <span
@@ -56,6 +58,8 @@ export default function Home() {
           ))}
         </ul>
       </div>
+
+      <HeroCards items={heroCards} className="w-full max-w-md lg:max-w-none" />
     </section>
   )
 }

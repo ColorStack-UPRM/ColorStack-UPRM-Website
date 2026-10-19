@@ -38,4 +38,22 @@ export const en = {
   entry: 'OPEN TO ALL UPRM STUDENTS',
   cost: 'FREE TO JOIN',
   heroSponsor: 'Sponsor Our Chapter',
+
+  // Hero cards
+  heroCardGetTitle: 'Land',
+  heroCardGetTag: 'Goal',
+  heroCardGetDescription:
+    'A polished résumé, referrals, and interview practice until the offer arrives.',
+  heroCardConnectTitle: 'Connect',
+  heroCardConnectTag: 'Network',
+  heroCardConnectDescription:
+    'Alumni mentorship, company talks, and the national ColorStack network.',
+  heroCardBuildTitle: 'Build',
+  heroCardBuildTag: 'Projects',
+  heroCardBuildDescription:
+    'StackWorks is where chapter ideas become real projects. This website is the first.',
+  heroCardLearnTitle: 'Learn',
+  heroCardLearnTag: 'Foundation',
+  heroCardLearnDescription:
+    'Workshops on Git, data structures, and technical interviews, led by people who have been there.',
 } satisfies Record<TranslationKey, string>
