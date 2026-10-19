@@ -74,7 +74,7 @@ export default function Footer() {
           </FooterColumn>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-chapter-white/15 pt-6 text-[10px] font-medium tracking-widest text-chapter-white/60 uppercase sm:mt-16 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-4 border-t border-chapter-white/15 pt-6 font-stackworks text-[10px] font-medium tracking-widest text-chapter-white/60 uppercase sm:mt-16 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} ColorStack UPRM</p>
           <p>Mayagüez, Puerto Rico</p>
           <p>{t('builtBy')}</p>

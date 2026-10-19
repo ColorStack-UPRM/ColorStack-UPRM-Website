@@ -11,7 +11,7 @@ export default function FooterColumn({ title, children }: FooterColumnProps) {
     <section>
       <Heading
         level={2}
-        className="mb-5 text-xs font-semibold tracking-widest text-chapter-white/70 uppercase sm:text-xs"
+        className="mb-5 font-stackworks text-xs font-semibold tracking-widest text-chapter-white/70 uppercase sm:text-xs"
       >
         {title}
       </Heading>
