@@ -36,7 +36,7 @@ export default function Home() {
         <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:flex-wrap">
           <Button
             variant="coral"
-            className="w-full gap-3 sm:w-auto"
+            className="w-full gap-3 focus-visible:outline-chapter-white! sm:w-auto"
             to="/become-a-member"
           >
             {t('membership')}
