@@ -27,10 +27,14 @@ export default function Layout() {
       <ScrollToAnchor />
       <Navbar key={location.key} />
 
-      <main id="main-content" tabIndex={-1} className="flex flex-1 py-12">
-        <Container>
+      <main id="main-content" tabIndex={-1} className="flex-1">
+        {pathname === '/' ? (
           <Outlet />
-        </Container>
+        ) : (
+          <Container className="py-12">
+            <Outlet />
+          </Container>
+        )}
       </main>
 
       <Footer />

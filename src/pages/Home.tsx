@@ -1,3 +1,4 @@
+import Hero from '../components/Hero'
 import { useTranslation } from '../i18n/useTranslation'
 import Button from '../components/Button'
 import HeroCards from '../components/HeroCards'
@@ -13,9 +14,9 @@ export default function Home() {
   const lastWord = lastSpace >= 0 ? headline.slice(lastSpace + 1) : headline
 
   return (
-    <section className="grid min-h-[55vh] w-full items-center gap-12 py-10 sm:py-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] lg:py-16">
+    <Hero>
       <div className="w-full max-w-2xl space-y-6 sm:space-y-8">
-        <p className="flex items-center gap-3 font-stackworks text-[0.65rem] font-semibold tracking-[0.18em] text-sage-700 uppercase sm:text-xs">
+        <p className="flex items-center gap-3 font-stackworks text-[0.65rem] font-semibold tracking-[0.18em] text-chapter-white/85 uppercase sm:text-xs">
           <span
             aria-hidden="true"
             className="h-px w-7 shrink-0 bg-chapter-green"
@@ -23,19 +24,19 @@ export default function Home() {
           {t('campus')}
         </p>
 
-        <h1 className="max-w-[11ch] text-[clamp(2.75rem,9vw,6rem)] leading-[0.9] font-extrabold tracking-[-0.045em] wrap-break-word text-chapter-dark">
+        <h1 className="max-w-[11ch] text-[clamp(2.75rem,9vw,6rem)] leading-[0.9] font-extrabold tracking-[-0.045em] wrap-break-word text-chapter-white">
           {firstPart && `${firstPart} `}
-          <span className="text-chapter-green">{lastWord}</span>
+          <span className="text-highlight">{lastWord}</span>
         </h1>
 
-        <p className="max-w-xl text-base leading-relaxed text-sage-800 sm:text-lg sm:leading-8">
+        <p className="max-w-xl text-base leading-relaxed text-chapter-white/90 sm:text-lg sm:leading-8">
           {t('whoWeAre')}
         </p>
 
         <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:flex-wrap">
           <Button
             variant="coral"
-            className="w-full gap-3 sm:w-auto"
+            className="w-full gap-3 focus-visible:outline-chapter-white! sm:w-auto"
             to="/become-a-member"
           >
             {t('membership')}
@@ -50,7 +51,7 @@ export default function Home() {
         <ul className="grid max-w-xl list-disc grid-cols-1 gap-x-6 gap-y-3 pl-5 pt-2 marker:text-chapter-green sm:grid-cols-2">
           {[t('entry'), t('cost')].map((item) => (
             <li
-              className="min-w-0 font-stackworks text-[0.65rem] font-medium tracking-widest text-sage-700 uppercase sm:text-xs"
+              className="min-w-0 font-stackworks text-[0.65rem] font-medium tracking-widest text-chapter-white/85 uppercase sm:text-xs"
               key={item}
             >
               {item}
@@ -60,6 +61,6 @@ export default function Home() {
       </div>
 
       <HeroCards items={heroCards} className="w-full max-w-md lg:max-w-none" />
-    </section>
+    </Hero>
   )
 }
