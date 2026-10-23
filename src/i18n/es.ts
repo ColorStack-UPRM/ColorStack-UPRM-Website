@@ -54,6 +54,20 @@ export const es = {
   heroCardLearnTag: 'Base',
   heroCardLearnDescription:
     'Talleres de Git, estructuras de datos y entrevistas técnicas, dados por gente que ya pasó por ahí.',
+
+  // What we do rows
+  whatWeDoWorkshopsTitle: 'Talleres técnicos',
+  whatWeDoWorkshopsDescription:
+    'Git y GitHub, fundamentos de web, algoritmos y práctica de LeetCode. Se hacen en el salón y quedan grabados.',
+  whatWeDoStackWorksTitle: 'StackWorks',
+  whatWeDoStackWorksDescription:
+    'El brazo del capítulo que planifica y construye. Trabajamos en sprints de dos semanas, con board público y código abierto.',
+  whatWeDoMentorshipTitle: 'Mentoría y comunidad',
+  whatWeDoMentorshipDescription:
+    'Egresados del Colegio que ya están en la industria acompañan a estudiantes durante el semestre completo.',
+  whatWeDoCareerTitle: 'Preparación de carrera',
+  whatWeDoCareerDescription:
+    'Clínicas de résumé antes del career fair, simulacros de entrevista y guía para aplicar a internships a tiempo.',
 }
 
 export type TranslationKey = keyof typeof es
