@@ -68,6 +68,9 @@ export const es = {
   whatWeDoCareerTitle: 'Preparación de carrera',
   whatWeDoCareerDescription:
     'Clínicas de résumé antes del career fair, simulacros de entrevista y guía para aplicar a internships a tiempo.',
+  whatWeDoHeadline: 'El semestre, capa por capa',
+  whatWeDoIntro:
+    'Todo lo que hacemos cae en una de estas cuatro capas. Cada actividad del semestre sube al equipo un nivel.',
 }
 
 export type TranslationKey = keyof typeof es

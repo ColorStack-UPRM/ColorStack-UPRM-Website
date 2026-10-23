@@ -70,5 +70,8 @@ export const en = {
   whatWeDoCareerTitle: 'Career preparation',
   whatWeDoCareerDescription:
     'Résumé clinics before the career fair, mock interviews, and guidance on applying for internships on time.',
+  whatWeDoHeadline: 'The semester, layer by layer',
+  whatWeDoIntro:
+  'Everything we do falls into one of these four layers. Each activity throughout the semester takes the team up a level.',
 
 } satisfies Record<TranslationKey, string>
