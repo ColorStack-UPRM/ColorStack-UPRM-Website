@@ -1,3 +1,5 @@
+import type { CSSProperties } from 'react'
+import { useState } from 'react'
 import type { TranslationKey } from '../i18n/es'
 import { useTranslation } from '../i18n/useTranslation'
 
@@ -15,11 +17,26 @@ type HeroCardsProps = {
 
 export default function HeroCards({ items, className = '' }: HeroCardsProps) {
   const { t } = useTranslation()
+  const [hasOpened, setHasOpened] = useState(false)
+
   return (
-    <ul className={`flex flex-col gap-3 ${className}`}>
-      {items.map(({ title, tag, description, highlighted }) => (
+    <ul
+      className={`hero-card-stack flex flex-col gap-3 ${hasOpened ? 'is-open' : ''} ${className}`}
+      onPointerEnter={(event) => {
+        if (!hasOpened && event.pointerType === 'mouse') {
+          setHasOpened(true)
+        }
+      }}
+    >
+      {items.map(({ title, tag, description, highlighted }, index) => (
         <li
           key={title}
+          style={
+            {
+              '--stack-offset': `${index * -9}rem`,
+              zIndex: items.length - index,
+            } as CSSProperties
+          }
           className={`rounded-2xl border p-6 ${highlighted ? 'border-forest-deep bg-forest-deep' : 'border-chapter-dark bg-chapter-white'}`}
         >
           <div className="flex items-baseline justify-between gap-4">
