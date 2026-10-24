@@ -10,7 +10,6 @@ export const en = {
   initiatives: 'Initiatives',
   events: 'Events',
   sponsors: 'Sponsors',
-  membership: 'Become a Member',
   notFound: '404 — Page not found',
   returnHome: 'Return home',
   brandHome: 'ColorStack UPRM home',
@@ -57,6 +56,27 @@ export const en = {
   heroCardLearnDescription:
     'Workshops on Git, data structures, and technical interviews, led by people who have been there.',
 
+  //Become a Member section
+  membership: 'Become a Member',
+  membershipTitle: 'Join the',
+  membershipTitleHighlight: 'community',
+  membershipDescription:
+    'Start with the ColorStack National application, then complete the ColorStack UPRM application. Review the instructions in each form before submitting.',
+  firstStepTitle: 'Apply to ColorStack National',
+  firstStepDescription:
+    'Complete the ColorStack National application using your UPRM email address.',
+  secondStepTitle: 'Apply to ColorStack UPRM',
+  secondStepDescription:
+    'Complete the chapter application to express your interest in ColorStack UPRM.',
+  thirdStepTitle: 'Attend the next event',
+  thirdStepDescription:
+    'Meet the community and choose where you wish to participate',
+  colorStackNationalLabel: 'ColorStack National',
+  colorStackUPRMLabel: 'ColorStack UPRM',
+  callToAction: 'Apply here!',
+  correctEmail: 'Use your UPRM email address',
+  moreInfo: 'Get more info →',
+
   // What we do rows
   whatWeDoWorkshopsTitle: 'Technical workshops',
   whatWeDoWorkshopsDescription:
@@ -72,6 +92,5 @@ export const en = {
     'Résumé clinics before the career fair, mock interviews, and guidance on applying for internships on time.',
   whatWeDoHeadline: 'The semester, layer by layer',
   whatWeDoIntro:
-  'Everything we do falls into one of these four layers. Each activity throughout the semester takes the team up a level.',
-
+    'Everything we do falls into one of these four layers. Each activity throughout the semester takes the team up a level.',
 } satisfies Record<TranslationKey, string>
