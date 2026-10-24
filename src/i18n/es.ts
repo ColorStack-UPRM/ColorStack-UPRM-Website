@@ -56,25 +56,41 @@ export const es = {
 
   //Become a Member section
   membership: 'Hazte miembro',
-  membershipTitle: 'Entrar toma',
-  membershipTitleHighlight: 'dos minutos',
-  membershipDescription: 
-    'No hay requisitos, no hay cuota y no hay que saber programar todavía. Llena el formulario y te escribimos antes de la próxima reunión',
-  fisrtStepTitle: 'Llena los formularios',
-  firstStepDescription: 
-    'Ve y llena el formulario de ColorStack Nacional primero y luego llenas el formulario de ColorStack UPRM',
-  secondStepTitle: 'Te añadimos al WhatsApp',
+  membershipTitle: 'Únete a la',
+  membershipTitleHighlight: 'comunidad',
+  membershipDescription:
+    'Comienza con la solicitud de ColorStack Nacional y luego completa la de ColorStack UPRM. Revisa las instrucciones de cada formulario antes de enviarlo.',
+  firstStepTitle: 'Solicita a ColorStack Nacional',
+  firstStepDescription:
+    'Completa la solicitud de ColorStack Nacional usando tu correo electrónico de UPRM.',
+  secondStepTitle: 'Solicita a ColorStack UPRM',
   secondStepDescription:
-    'Ahí sale todo: reuniones, talleres y oportunidades',
+    'Completa la solicitud del capítulo para expresar tu interés en ColorStack UPRM.',
   thirdStepTitle: 'Vienes al próximo evento',
-  thirdStepDescription: 
-    'Conoce a la comunidad y escoges en qué participar',
+  thirdStepDescription: 'Conoce a la comunidad y escoges en qué participar',
   colorStackNationalLabel: 'ColorStack Nacional',
   colorStackUPRMLabel: 'ColorStack UPRM',
   callToAction: 'Aplica aquí!',
-  correctEmail: 'Use su correo institucional',
+  correctEmail:
+    'Usa tu correo electrónico de UPRM para la solicitud de ColorStack Nacional.',
   moreInfo: 'Más información →',
 
+  // What we do rows
+  whatWeDoWorkshopsTitle: 'Talleres técnicos',
+  whatWeDoWorkshopsDescription:
+    'Git y GitHub, fundamentos de web, algoritmos y práctica de LeetCode. Se hacen en el salón y quedan grabados.',
+  whatWeDoStackWorksTitle: 'StackWorks',
+  whatWeDoStackWorksDescription:
+    'El brazo del capítulo que planifica y construye. Trabajamos en sprints de dos semanas, con board público y código abierto.',
+  whatWeDoMentorshipTitle: 'Mentoría y comunidad',
+  whatWeDoMentorshipDescription:
+    'Egresados del Colegio que ya están en la industria acompañan a estudiantes durante el semestre completo.',
+  whatWeDoCareerTitle: 'Preparación de carrera',
+  whatWeDoCareerDescription:
+    'Clínicas de résumé antes del career fair, simulacros de entrevista y guía para aplicar a internships a tiempo.',
+  whatWeDoHeadline: 'El semestre, capa por capa',
+  whatWeDoIntro:
+    'Todo lo que hacemos cae en una de estas cuatro capas. Cada actividad del semestre sube al equipo un nivel.',
 }
 
 export type TranslationKey = keyof typeof es

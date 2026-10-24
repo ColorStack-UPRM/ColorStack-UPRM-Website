@@ -55,27 +55,43 @@ export const en = {
   heroCardLearnTag: 'Foundation',
   heroCardLearnDescription:
     'Workshops on Git, data structures, and technical interviews, led by people who have been there.',
-  
+
   //Become a Member section
   membership: 'Become a Member',
-  membershipTitle: 'Joining takes',
-  membershipTitleHighlight: 'two minutes',
-  membershipDescription: 
-    'There are no requirements, no fees, and you don\'t need to know how to code yet. Fill out the form, and we\'ll be in touch before the next meeting.',
-  fisrtStepTitle: 'Fill the applications',
-  firstStepDescription: 
-    'Go fill the ColorStack National application first, then fill the ColorStack UPRM application',
-  secondStepTitle: 'We add you to the WhatsApp',
+  membershipTitle: 'Join the',
+  membershipTitleHighlight: 'community',
+  membershipDescription:
+    'Start with the ColorStack National application, then complete the ColorStack UPRM application. Review the instructions in each form before submitting.',
+  firstStepTitle: 'Apply to ColorStack National',
+  firstStepDescription:
+    'Complete the ColorStack National application using your UPRM email address.',
+  secondStepTitle: 'Apply to ColorStack UPRM',
   secondStepDescription:
-    'You\'ll find everything there: meetings, workshops, and opportunities.',
+    'Complete the chapter application to express your interest in ColorStack UPRM.',
   thirdStepTitle: 'Attend the next event',
-  thirdStepDescription: 
+  thirdStepDescription:
     'Meet the community and choose where you wish to participate',
   colorStackNationalLabel: 'ColorStack National',
   colorStackUPRMLabel: 'ColorStack UPRM',
   callToAction: 'Apply here!',
-  correctEmail: 'Use your institutional email',
+  correctEmail:
+    'Use your UPRM email address for the ColorStack National application.',
   moreInfo: 'Get more info →',
 
-
+  // What we do rows
+  whatWeDoWorkshopsTitle: 'Technical workshops',
+  whatWeDoWorkshopsDescription:
+    'Git and GitHub, web fundamentals, algorithms, and LeetCode practice. Sessions take place in the classroom and are recorded.',
+  whatWeDoStackWorksTitle: 'StackWorks',
+  whatWeDoStackWorksDescription:
+    'The chapter’s team for planning and building. We work in two-week sprints with a public board and open-source code.',
+  whatWeDoMentorshipTitle: 'Mentorship and community',
+  whatWeDoMentorshipDescription:
+    'UPRM alumni working in the industry mentor students throughout the semester.',
+  whatWeDoCareerTitle: 'Career preparation',
+  whatWeDoCareerDescription:
+    'Résumé clinics before the career fair, mock interviews, and guidance on applying for internships on time.',
+  whatWeDoHeadline: 'The semester, layer by layer',
+  whatWeDoIntro:
+    'Everything we do falls into one of these four layers. Each activity throughout the semester takes the team up a level.',
 } satisfies Record<TranslationKey, string>
