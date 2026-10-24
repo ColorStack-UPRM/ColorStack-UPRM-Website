@@ -59,3 +59,20 @@
 body {
   font-family: var(--font-chapter);
 }
+
+@media (hover: hover) and (min-width: 64rem) {
+  .hero-card-stack > li {
+    transform: translateY(var(--stack-offset, 0));
+    transition: transform 400ms ease;
+  }
+
+  .hero-card-stack.is-open > li {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-card-stack > li {
+    transition: none;
+  }
+}
