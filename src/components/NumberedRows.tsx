@@ -37,8 +37,8 @@ export default function NumberedRows({
             aria-hidden="true"
             className="
              col-start-1 row-start-1
-             font-stackworks text-xs 
-             tracking-widest text-accent
+             font-stackworks text-xs
+             tracking-widest text-chapter-dark
             "
           >
             {String(index + 1).padStart(2, '0')}
@@ -47,7 +47,7 @@ export default function NumberedRows({
           <h3
             className="
               col-start-2 row-start-1 min-w-0
-              wrap-break-words text-lg leading-tight font-bold
+              wrap-anywhere text-lg leading-tight font-bold
               tracking-tight uppercase text-chapter-dark
               lg:text-2xl
             "
@@ -58,7 +58,7 @@ export default function NumberedRows({
           <p
             className="
               col-span-3 col-start-1 row-start-2 min-w-0
-              wrap-break-words text-base leading-relaxed text-sage-900
+              wrap-anywhere text-base leading-relaxed text-sage-900
               lg:col-span-1 lg:col-start-3 lg:row-start-1
               lg:text-lg
             "
