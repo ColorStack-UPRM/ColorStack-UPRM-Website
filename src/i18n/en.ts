@@ -74,8 +74,7 @@ export const en = {
   colorStackNationalLabel: 'ColorStack National',
   colorStackUPRMLabel: 'ColorStack UPRM',
   callToAction: 'Apply here!',
-  correctEmail:
-    'Use your UPRM email address for the ColorStack National application.',
+  correctEmail: 'Use your UPRM email address',
   moreInfo: 'Get more info →',
 
   // What we do rows
