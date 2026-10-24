@@ -56,4 +56,22 @@ export const en = {
   heroCardLearnTag: 'Foundation',
   heroCardLearnDescription:
     'Workshops on Git, data structures, and technical interviews, led by people who have been there.',
+
+  // What we do rows
+  whatWeDoWorkshopsTitle: 'Technical workshops',
+  whatWeDoWorkshopsDescription:
+    'Git and GitHub, web fundamentals, algorithms, and LeetCode practice. Sessions take place in the classroom and are recorded.',
+  whatWeDoStackWorksTitle: 'StackWorks',
+  whatWeDoStackWorksDescription:
+    'The chapter’s team for planning and building. We work in two-week sprints with a public board and open-source code.',
+  whatWeDoMentorshipTitle: 'Mentorship and community',
+  whatWeDoMentorshipDescription:
+    'UPRM alumni working in the industry mentor students throughout the semester.',
+  whatWeDoCareerTitle: 'Career preparation',
+  whatWeDoCareerDescription:
+    'Résumé clinics before the career fair, mock interviews, and guidance on applying for internships on time.',
+  whatWeDoHeadline: 'The semester, layer by layer',
+  whatWeDoIntro:
+  'Everything we do falls into one of these four layers. Each activity throughout the semester takes the team up a level.',
+
 } satisfies Record<TranslationKey, string>
