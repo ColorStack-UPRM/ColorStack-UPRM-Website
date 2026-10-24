@@ -8,7 +8,6 @@ export const es = {
   initiatives: 'Iniciativas',
   events: 'Eventos',
   sponsors: 'Auspiciadores',
-  membership: 'Hazte miembro',
   notFound: '404 — Página no encontrada',
   returnHome: 'Volver al inicio',
   brandHome: 'ColorStack UPRM — Inicio',
@@ -54,6 +53,28 @@ export const es = {
   heroCardLearnTag: 'Base',
   heroCardLearnDescription:
     'Talleres de Git, estructuras de datos y entrevistas técnicas, dados por gente que ya pasó por ahí.',
+
+  //Become a Member section
+  membership: 'Hazte miembro',
+  membershipTitle: 'Entrar toma',
+  membershipTitleHighlight: 'dos minutos',
+  membershipDescription: 
+    'No hay requisitos, no hay cuota y no hay que saber programar todavía. Llena el formulario y te escribimos antes de la próxima reunión',
+  fisrtStepTitle: 'Llena los formularios',
+  firstStepDescription: 
+    'Ve y llena el formulario de ColorStack Nacional primero y luego llenas el formulario de ColorStack UPRM',
+  secondStepTitle: 'Te añadimos al WhatsApp',
+  secondStepDescription:
+    'Ahí sale todo: reuniones, talleres y oportunidades',
+  thirdStepTitle: 'Vienes al próximo evento',
+  thirdStepDescription: 
+    'Conoce a la comunidad y escoges en qué participar',
+  colorStackNationalLabel: 'ColorStack Nacional',
+  colorStackUPRMLabel: 'ColorStack UPRM',
+  callToAction: 'Aplica aquí!',
+  correctEmail: 'Use su correo institucional',
+  moreInfo: 'Más información →',
+
 }
 
 export type TranslationKey = keyof typeof es
