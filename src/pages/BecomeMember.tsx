@@ -2,6 +2,7 @@ import { useTranslation } from '../i18n/useTranslation'
 import Heading from '../components/Heading'
 import Button from '../components/Button'
 import Container from '../components/Container'
+import { membershipSteps } from '../config/membershipSteps'
 
 const COLORSTACK_NATIONAL_URL = 'https://app.colorstack.io/apply'
 const COLORSTACK_UPRM_URL =
@@ -9,20 +10,6 @@ const COLORSTACK_UPRM_URL =
 
 export default function BecomeMember() {
   const { t } = useTranslation()
-  const steps = [
-    {
-      title: t('firstStepTitle'),
-      description: t('firstStepDescription'),
-    },
-    {
-      title: t('secondStepTitle'),
-      description: t('secondStepDescription'),
-    },
-    {
-      title: t('thirdStepTitle'),
-      description: t('thirdStepDescription'),
-    },
-  ]
   return (
     <section className="flex flex-1 bg-forest text-chapter-white">
       <Container className="grid w-full min-h-[55vh] items-center gap-12 py-12 sm:py-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] lg:gap-16 lg:py-24">
@@ -47,12 +34,12 @@ export default function BecomeMember() {
           </p>
 
           <ol className="pt-2">
-            {steps.map((step, i) => {
-              const isLast = i === steps.length - 1
+            {membershipSteps.map((step, i) => {
+              const isLast = i === membershipSteps.length - 1
               return (
                 <li
-                  key={step.title}
-                  className={`relative grid grid-cols-[2.25rem_1fr] gap-x-5 ${isLast ? '' : 'pb-7'}`}
+                  key={step.id}
+                  className={`relative grid grid-cols-[2.25rem_minmax(0,1fr)] gap-x-5 ${isLast ? '' : 'pb-7'}`}
                 >
                   {!isLast && (
                     <span
@@ -60,15 +47,18 @@ export default function BecomeMember() {
                       className="absolute top-9 bottom-0 left-4.5 w-px bg-chapter-white/35"
                     />
                   )}
-                  <span className="grid size-9 place-items-center rounded-full bg-accent text-sm font-bold text-chapter-dark">
+                  <span
+                    aria-hidden="true"
+                    className="grid size-9 place-items-center rounded-full bg-accent text-sm font-bold text-chapter-dark"
+                  >
                     {i + 1}
                   </span>
-                  <div className="pt-1.5">
+                  <div className="min-w-0 wrap-anywhere pt-1.5">
                     <h2 className="text-sm font-semibold tracking-wide text-chapter-white uppercase sm:text-base">
-                      {step.title}
+                      {t(step.title)}
                     </h2>
                     <p className="mt-1.5 text-sm text-chapter-white/90 sm:text-base">
-                      {step.description}
+                      {t(step.description)}
                     </p>
                   </div>
                 </li>
