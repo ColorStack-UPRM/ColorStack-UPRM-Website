@@ -3,8 +3,9 @@ import Heading from '../components/Heading'
 import Button from '../components/Button'
 import Container from '../components/Container'
 
-const COLORSTACK_NATIONAL_URL = '#'
-const COLORSTACK_UPRM_URL = '#'
+const COLORSTACK_NATIONAL_URL = 'https://app.colorstack.io/apply'
+const COLORSTACK_UPRM_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLScdUMYJDIGzWhOP-3V3JzVuHLwzZKWNJVW8lkmHj1nTjFLHJg/viewform'
 
 export default function BecomeMember() {
   const { t } = useTranslation()
@@ -90,6 +91,7 @@ export default function BecomeMember() {
               variant="coral"
               className="w-full"
               href={COLORSTACK_NATIONAL_URL}
+              aria-describedby="membership-email-note"
             >
               {t('colorStackNationalLabel')}
             </Button>
@@ -97,10 +99,14 @@ export default function BecomeMember() {
               variant="coral"
               className="w-full"
               href={COLORSTACK_UPRM_URL}
+              aria-describedby="membership-email-note"
             >
               {t('colorStackUPRMLabel')}
             </Button>
-            <p className="text-center font-stackworks text-xs tracking-wide text-sage-700">
+            <p
+              id="membership-email-note"
+              className="text-center font-stackworks text-xs tracking-wide text-sage-700"
+            >
               {t('correctEmail')}
             </p>
           </div>
