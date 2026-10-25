@@ -1,4 +1,5 @@
 import Hero from '../components/Hero'
+import WhatWeDo from './WhatWeDo'
 import { useTranslation } from '../i18n/useTranslation'
 import Button from '../components/Button'
 import HeroCards from '../components/HeroCards'
@@ -14,53 +15,64 @@ export default function Home() {
   const lastWord = lastSpace >= 0 ? headline.slice(lastSpace + 1) : headline
 
   return (
-    <Hero>
-      <div className="w-full max-w-2xl space-y-6 sm:space-y-8">
-        <p className="flex items-center gap-3 font-stackworks text-[0.65rem] font-semibold tracking-[0.18em] text-chapter-white/85 uppercase sm:text-xs">
-          <span
-            aria-hidden="true"
-            className="h-px w-7 shrink-0 bg-chapter-green"
-          />
-          {t('campus')}
-        </p>
+    <>
+      <Hero>
+        <div className="w-full max-w-2xl space-y-6 sm:space-y-8">
+          <p className="flex items-center gap-3 font-stackworks text-[0.65rem] font-semibold tracking-[0.18em] text-chapter-white/85 uppercase sm:text-xs">
+            <span
+              aria-hidden="true"
+              className="h-px w-7 shrink-0 bg-chapter-green"
+            />
+            {t('campus')}
+          </p>
 
-        <h1 className="max-w-[11ch] text-[clamp(2.75rem,9vw,6rem)] leading-[0.9] font-extrabold tracking-[-0.045em] wrap-break-word text-chapter-white">
-          {firstPart && `${firstPart} `}
-          <span className="text-highlight">{lastWord}</span>
-        </h1>
+          <h1 className="max-w-[11ch] text-[clamp(2.75rem,9vw,6rem)] leading-[0.9] font-extrabold tracking-[-0.045em] wrap-break-word text-chapter-white">
+            {firstPart && `${firstPart} `}
+            <span className="text-highlight">{lastWord}</span>
+          </h1>
 
-        <p className="max-w-xl text-base leading-relaxed text-chapter-white/90 sm:text-lg sm:leading-8">
-          {t('whoWeAre')}
-        </p>
+          <p className="max-w-xl text-base leading-relaxed text-chapter-white/90 sm:text-lg sm:leading-8">
+            {t('whoWeAre')}
+          </p>
 
-        <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:flex-wrap">
-          <Button
-            variant="coral"
-            className="w-full gap-3 focus-visible:outline-chapter-white! sm:w-auto"
-            to="/become-a-member"
-          >
-            {t('membership')}
-            <span aria-hidden="true">→</span>
-          </Button>
+          <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:flex-wrap">
+            <Button
+              variant="coral"
+              className="w-full gap-3 focus-visible:outline-chapter-white! sm:w-auto"
+              to="/become-a-member"
+            >
+              {t('membership')}
+              <span aria-hidden="true">→</span>
+            </Button>
 
-          <Button variant="outline" className="w-full sm:w-auto" to="/sponsors">
-            {t('heroSponsor')}
-          </Button>
+            <Button variant="outline" className="w-full sm:w-auto" to="/sponsors">
+
+
+
+              {t('heroSponsor')}
+            </Button>
+          </div>
+
+          <ul className="grid max-w-xl list-disc grid-cols-1 gap-x-6 gap-y-3 pl-5 pt-2 marker:text-chapter-green sm:grid-cols-2">
+            {[t('entry'), t('cost')].map((item) => (
+              <li
+                className="min-w-0 font-stackworks text-[0.65rem] font-medium tracking-widest text-chapter-white/85 uppercase sm:text-xs"
+                key={item}
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
 
-        <ul className="grid max-w-xl list-disc grid-cols-1 gap-x-6 gap-y-3 pl-5 pt-2 marker:text-chapter-green sm:grid-cols-2">
-          {[t('entry'), t('cost')].map((item) => (
-            <li
-              className="min-w-0 font-stackworks text-[0.65rem] font-medium tracking-widest text-chapter-white/85 uppercase sm:text-xs"
-              key={item}
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
+        <HeroCards items={heroCards} className="w-full max-w-md lg:max-w-none"/>
 
-      <HeroCards items={heroCards} className="w-full max-w-md lg:max-w-none" />
-    </Hero>
+
+        
+      </Hero>
+
+      {/* What We Do section */}
+      <WhatWeDo />
+    </>
   )
 }
