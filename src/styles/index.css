@@ -59,3 +59,35 @@
 body {
   font-family: var(--font-chapter);
 }
+
+@media (hover: hover) and (pointer: fine) and (min-width: 64rem) {
+  .hero-card-stack > li {
+    transform: translateY(var(--stack-offset, 0));
+    transition:
+      transform 400ms ease,
+      translate 200ms ease,
+      border-color 200ms ease,
+      box-shadow 200ms ease;
+  }
+
+  .hero-card-stack.is-open > li {
+    transform: translateY(0);
+  }
+
+  .hero-card-stack.is-open > li:hover {
+    translate: 0 -6px;
+    border-color: var(--color-chapter-green);
+    box-shadow: 0 12px 24px -8px
+      color-mix(in srgb, var(--color-chapter-dark) 35%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-card-stack > li {
+    transition: none;
+  }
+
+  .hero-card-stack.is-open > li:hover {
+    translate: none;
+  }
+}
