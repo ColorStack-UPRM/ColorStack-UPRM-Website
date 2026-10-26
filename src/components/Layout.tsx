@@ -6,6 +6,9 @@ import Footer from './Footer'
 import { membershipLink, primaryNavigation } from '../config/navigation'
 import Container from './Container'
 
+
+const fullBleedPaths = new Set(['/', membershipLink.to])
+
 export default function Layout() {
   const { t } = useTranslation()
   const location = useLocation()
@@ -27,8 +30,8 @@ export default function Layout() {
       <ScrollToAnchor />
       <Navbar key={location.key} />
 
-      <main id="main-content" tabIndex={-1} className="flex-1">
-        {pathname === '/' ? (
+      <main id="main-content" tabIndex={-1} className="flex flex-1 flex-col">
+        {fullBleedPaths.has(pathname) ? (
           <Outlet />
         ) : (
           <Container className="py-12">
