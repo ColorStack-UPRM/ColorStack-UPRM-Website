@@ -77,13 +77,13 @@ export const es = {
   // What we do rows
   whatWeDoWorkshopsTitle: 'Talleres técnicos',
   whatWeDoWorkshopsDescription:
-    'Git y GitHub, fundamentos de web, algoritmos y práctica de LeetCode. Se hacen en el salón y quedan grabados.',
+    'Git y GitHub, fundamentos de web, algoritmos y práctica de LeetCode. Los talleres quedan grabados.',
   whatWeDoStackWorksTitle: 'StackWorks',
   whatWeDoStackWorksDescription:
     'El brazo del capítulo que planifica y construye. Trabajamos en sprints de dos semanas, con board público y código abierto.',
   whatWeDoMentorshipTitle: 'Mentoría y comunidad',
   whatWeDoMentorshipDescription:
-    'Egresados del Colegio que ya están en la industria acompañan a estudiantes durante el semestre completo.',
+    'Conecta con egresados del Colegio y otros estudiantes para compartir experiencias y orientarte en tu camino hacia la industria.',
   whatWeDoCareerTitle: 'Preparación de carrera',
   whatWeDoCareerDescription:
     'Clínicas de résumé antes del career fair, simulacros de entrevista y guía para aplicar a internships a tiempo.',
