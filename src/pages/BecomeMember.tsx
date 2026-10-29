@@ -1,12 +1,8 @@
 import { useTranslation } from '../i18n/useTranslation'
 import Heading from '../components/Heading'
-import Button from '../components/Button'
 import Container from '../components/Container'
+import MembershipCard from '../components/MembershipCard'
 import { membershipSteps } from '../config/membershipSteps'
-
-const COLORSTACK_NATIONAL_URL = 'https://app.colorstack.io/apply'
-const COLORSTACK_UPRM_URL =
-  'https://docs.google.com/forms/d/e/1FAIpQLScdUMYJDIGzWhOP-3V3JzVuHLwzZKWNJVW8lkmHj1nTjFLHJg/viewform'
 
 export default function BecomeMember() {
   const { t } = useTranslation()
@@ -67,50 +63,7 @@ export default function BecomeMember() {
           </ol>
         </div>
 
-        <div className="flex w-full flex-col gap-6 rounded-4xl bg-surface p-8 sm:p-10">
-          {/* Header */}
-          <div className="space-y-3 text-center">
-            <h2 className="text-2xl font-extrabold tracking-tight text-chapter-dark uppercase sm:text-3xl">
-              {t('callToAction')}
-            </h2>
-          </div>
-
-          {/* Buttons + email note */}
-          <div className="flex flex-col gap-3">
-            <Button
-              variant="coral"
-              className="w-full"
-              href={COLORSTACK_NATIONAL_URL}
-              aria-describedby="membership-email-note"
-            >
-              {t('colorStackNationalLabel')}
-            </Button>
-            <Button
-              variant="coral"
-              className="w-full"
-              href={COLORSTACK_UPRM_URL}
-              aria-describedby="membership-email-note"
-            >
-              {t('colorStackUPRMLabel')}
-            </Button>
-            <p
-              id="membership-email-note"
-              className="text-center font-stackworks text-xs tracking-wide text-sage-700"
-            >
-              {t('correctEmail')}
-            </p>
-          </div>
-
-          {/* Get more info */}
-          <div className="border-t border-line pt-5 text-center">
-            <button
-              type="button"
-              className="font-stackworks text-xs font-semibold tracking-widest text-sage-900 uppercase underline underline-offset-4 hover:text-chapter-dark focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-chapter-dark"
-            >
-              {t('moreInfo')}
-            </button>
-          </div>
-        </div>
+        <MembershipCard />
       </Container>
     </section>
   )
