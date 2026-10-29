@@ -11,7 +11,7 @@ const COLORSTACK_UPRM_URL =
 const ACCORDION_DURATION_MS = 500
 
 const faceClassName =
-  'membership-card-face flex flex-col gap-6 rounded-4xl bg-surface p-8 sm:p-10'
+  'membership-card-face flex flex-col gap-6 rounded-4xl bg-surface p-8 shadow-2xl shadow-chapter-dark/40 sm:p-10'
 
 const titleClassName =
   'text-center text-2xl font-extrabold tracking-tight text-chapter-dark uppercase focus:outline-none sm:text-3xl'
