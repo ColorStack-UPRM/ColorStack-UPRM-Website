@@ -80,13 +80,13 @@ export const en = {
   // What we do rows
   whatWeDoWorkshopsTitle: 'Technical workshops',
   whatWeDoWorkshopsDescription:
-    'Git and GitHub, web fundamentals, algorithms, and LeetCode practice. Sessions take place in the classroom and are recorded.',
+    'Git and GitHub, web fundamentals, algorithms, and LeetCode practice. Sessions are recorded.',
   whatWeDoStackWorksTitle: 'StackWorks',
   whatWeDoStackWorksDescription:
     'The chapter’s team for planning and building. We work in two-week sprints with a public board and open-source code.',
   whatWeDoMentorshipTitle: 'Mentorship and community',
   whatWeDoMentorshipDescription:
-    'UPRM alumni working in the industry mentor students throughout the semester.',
+    'Connect with UPRM alumni and fellow students to share experiences and find guidance on your path into the industry.',
   whatWeDoCareerTitle: 'Career preparation',
   whatWeDoCareerDescription:
     'Résumé clinics before the career fair, mock interviews, and guidance on applying for internships on time.',
