@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type TransitionEvent } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from '../i18n/useTranslation'
 import Button from './Button'
 import { membershipFaq } from '../config/membershipFAQ'
@@ -6,6 +6,9 @@ import { membershipFaq } from '../config/membershipFAQ'
 const COLORSTACK_NATIONAL_URL = 'https://app.colorstack.io/apply'
 const COLORSTACK_UPRM_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLScdUMYJDIGzWhOP-3V3JzVuHLwzZKWNJVW8lkmHj1nTjFLHJg/viewform'
+
+// Must match the duration-500 class on the answer panels below.
+const ACCORDION_DURATION_MS = 500
 
 const faceClassName =
   'membership-card-face flex flex-col gap-6 rounded-4xl bg-surface p-8 sm:p-10'
@@ -16,14 +19,21 @@ const titleClassName =
 const textButtonClassName =
   'font-stackworks text-xs font-semibold tracking-widest text-sage-900 uppercase underline underline-offset-4 hover:text-chapter-dark focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-chapter-dark'
 
+const prefersReducedMotion = () =>
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
 export default function MembershipCard() {
   const { t } = useTranslation()
   const [isFlipped, setIsFlipped] = useState(false)
-  const [openIds, setOpenIds] = useState<ReadonlySet<string>>(new Set())
+  // Only one question can be open at a time.
+  const [openId, setOpenId] = useState<string | null>(null)
+  // True while an open question is collapsing before the card flips back.
+  const [isClosingToFlip, setIsClosingToFlip] = useState(false)
 
   const frontHeadingRef = useRef<HTMLHeadingElement>(null)
   const backHeadingRef = useRef<HTMLHeadingElement>(null)
   const hasFlipped = useRef(false)
+  const flipTimeout = useRef<number | undefined>(undefined)
 
   // After a flip, move focus to the heading of the side now showing so
   // keyboard and screen reader users land on the new content.
@@ -33,49 +43,41 @@ export default function MembershipCard() {
     heading.current?.focus({ preventScroll: true })
   }, [isFlipped])
 
-  const closeAllQuestions = () => setOpenIds(new Set())
+  // Don't leave a pending flip running if the page changes mid-collapse.
+  useEffect(() => () => window.clearTimeout(flipTimeout.current), [])
 
   const flip = () => {
     hasFlipped.current = true
-    const goingToFront = isFlipped
-    setIsFlipped(!isFlipped)
-
-    // With reduced motion there is no transition, so transitionend never
-    // fires. Close the questions right away instead.
-    if (
-      goingToFront &&
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    ) {
-      closeAllQuestions()
-    }
+    setIsFlipped((value) => !value)
   }
 
-  // Once the card has turned back to the front, close every question so the
-  // card shrinks back to its original size.
-  const handleTransitionEnd = (event: TransitionEvent<HTMLDivElement>) => {
-    if (
-      event.target === event.currentTarget &&
-      event.propertyName === 'transform' &&
-      !isFlipped
-    ) {
-      closeAllQuestions()
+  // Back button: if a question is open, collapse it first, then flip once
+  // the card has finished shrinking.
+  const flipToFront = () => {
+    if (isClosingToFlip) return
+
+    if (openId === null || prefersReducedMotion()) {
+      setOpenId(null)
+      flip()
+      return
     }
+
+    setOpenId(null)
+    setIsClosingToFlip(true)
+    flipTimeout.current = window.setTimeout(() => {
+      setIsClosingToFlip(false)
+      flip()
+    }, ACCORDION_DURATION_MS)
   }
 
-  const toggleQuestion = (id: string) =>
-    setOpenIds((previous) => {
-      const next = new Set(previous)
-      if (next.has(id)) {
-        next.delete(id)
-      } else {
-        next.add(id)
-      }
-      return next
-    })
+  const toggleQuestion = (id: string) => {
+    if (isClosingToFlip) return
+    setOpenId((current) => (current === id ? null : id))
+  }
 
   return (
     <div className={`membership-card w-full ${isFlipped ? 'is-flipped' : ''}`}>
-      <div className="membership-card-inner" onTransitionEnd={handleTransitionEnd}>
+      <div className="membership-card-inner">
         {/* ---------- Front: apply ---------- */}
         <div className={`${faceClassName} justify-center`} inert={isFlipped}>
           <h2 ref={frontHeadingRef} tabIndex={-1} className={titleClassName}>
@@ -122,7 +124,7 @@ export default function MembershipCard() {
 
           <ul className="border-t border-chapter-dark">
             {membershipFaq.map(({ id, question, answer }) => {
-              const isOpen = openIds.has(id)
+              const isOpen = openId === id
               const panelId = `membership-faq-${id}`
 
               return (
@@ -144,12 +146,22 @@ export default function MembershipCard() {
                       </span>
                     </button>
                   </h3>
+
+                  {/* Animates height by moving the grid row between 0fr and 1fr. */}
                   <div
                     id={panelId}
-                    hidden={!isOpen}
-                    className="pb-4 text-sm leading-relaxed text-sage-900"
+                    inert={!isOpen}
+                    className={`grid transition-[grid-template-rows,opacity] duration-500 ease-in-out motion-reduce:transition-none ${
+                      isOpen
+                        ? 'grid-rows-[1fr] opacity-100'
+                        : 'grid-rows-[0fr] opacity-0'
+                    }`}
                   >
-                    {t(answer)}
+                    <div className="min-h-0 overflow-hidden">
+                      <p className="pb-4 text-sm leading-relaxed text-sage-900">
+                        {t(answer)}
+                      </p>
+                    </div>
                   </div>
                 </li>
               )
@@ -157,7 +169,11 @@ export default function MembershipCard() {
           </ul>
 
           <div className="text-center">
-            <button type="button" onClick={flip} className={textButtonClassName}>
+            <button
+              type="button"
+              onClick={flipToFront}
+              className={textButtonClassName}
+            >
               {t('faqBack')}
             </button>
           </div>
