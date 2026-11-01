@@ -19,7 +19,7 @@ export default function About({ boardLinkTo }: AboutProps) {
   return (
     <section
       aria-labelledby="about"
-      className="rounded-t-3xl bg-chapter-dark py-16 text-chapter-white md:py-24 lg:py-28"
+      className="bg-chapter-dark py-16 text-chapter-white md:py-24 lg:py-28"
     >
       <Container className="grid gap-10 lg:grid-cols-2 lg:gap-20">
         <div className="min-w-0">
