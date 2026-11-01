@@ -29,7 +29,7 @@ export const en = {
   builtBy: 'Built by StackWorks',
   description: 'ColorStack UPRM | Mayagüez Chapter of ColorStack.',
 
-  // About section as is from demo copy; activity confirmation tracked in #64.
+  // About section
   aboutLabel: 'Who we are',
   aboutHeadline: 'More of us',
   aboutHeadlineHighlight: 'get in, stay and succeed',

@@ -27,7 +27,7 @@ export const es = {
   builtBy: 'Creado por StackWorks',
   description: 'ColorStack UPRM | Capítulo de ColorStack en Mayagüez.',
 
-  // About section as is fromdemo copy; activity confirmation tracked in #64.
+  // About section
   aboutLabel: 'Quiénes somos',
   aboutHeadline: 'Más de los nuestros',
   aboutHeadlineHighlight: 'entran, se quedan y llegan',
