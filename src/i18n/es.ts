@@ -27,6 +27,25 @@ export const es = {
   builtBy: 'Creado por StackWorks',
   description: 'ColorStack UPRM | Capítulo de ColorStack en Mayagüez.',
 
+  // About section as is fromdemo copy; activity confirmation tracked in #64.
+  aboutLabel: 'Quiénes somos',
+  aboutHeadline: 'Más de los nuestros',
+  aboutHeadlineHighlight: 'entran, se quedan y llegan',
+  aboutNationalMission:
+    'ColorStack es una organización sin fines de lucro que trabaja para aumentar la entrada, la retención y el éxito de estudiantes Black y Latinx en ciencias de computación.',
+  aboutChapterMission:
+    'El capítulo del RUM lleva esa misión al Colegio: un grupo de estudiantes que se organiza para que nadie tenga que averiguar solo cómo se consigue un internship, cómo se prepara una entrevista o a quién se le pregunta.',
+  aboutEntryTitle: 'Entrada',
+  aboutEntryDescription:
+    'Le enseñamos el camino a estudiantes de primer y segundo año antes de que se sientan tarde.',
+  aboutRetentionTitle: 'Retención',
+  aboutRetentionDescription:
+    'Grupos de estudio y mentoría para los cursos que sacan gente del programa.',
+  aboutSuccessTitle: 'Éxito',
+  aboutSuccessDescription:
+    'Práctica de entrevistas, revisión de résumé y contacto directo con reclutadores.',
+  aboutMeetBoard: 'Conoce la directiva',
+
   // Hero text section
   campus: 'RECINTO UNIVERSITARIO DE MAYAGÜEZ',
   goal: 'DEL COLEGIO A LA INDUSTRIA',

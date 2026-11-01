@@ -29,6 +29,25 @@ export const en = {
   builtBy: 'Built by StackWorks',
   description: 'ColorStack UPRM | Mayagüez Chapter of ColorStack.',
 
+  // About section as is from demo copy; activity confirmation tracked in #64.
+  aboutLabel: 'Who we are',
+  aboutHeadline: 'More of us',
+  aboutHeadlineHighlight: 'get in, stay and succeed',
+  aboutNationalMission:
+    'ColorStack is a nonprofit organization working to increase the entry, retention, and success of Black and Latinx students in computer science.',
+  aboutChapterMission:
+    'The UPRM chapter brings that mission to campus: students working together so no one has to figure out alone how to land an internship, prepare for an interview, or whom to ask for help.',
+  aboutEntryTitle: 'Entry',
+  aboutEntryDescription:
+    'We show first- and second-year students the way before they feel like they are too late.',
+  aboutRetentionTitle: 'Retention',
+  aboutRetentionDescription:
+    'Study groups and mentorship for the courses that push students out of the program.',
+  aboutSuccessTitle: 'Success',
+  aboutSuccessDescription:
+    'Interview practice, résumé reviews, and direct contact with recruiters.',
+  aboutMeetBoard: 'Meet the board',
+
   // Hero text section
   campus: 'UNIVERSITY OF PUERTO RICO AT MAYAGÜEZ',
   goal: 'FROM UPRM TO INDUSTRY',
