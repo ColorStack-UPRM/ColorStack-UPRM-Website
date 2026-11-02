@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Directiva — layout proposal</title>
+    <style>
+      @font-face {
+        font-family: Montserrat;
+        src: url('../../public/fonts/montserrat-variable.woff2');
+        font-weight: 100 900;
+      }
+      @font-face {
+        font-family: 'JetBrains Mono';
+        src: url('../../public/fonts/jetbrains-mono-variable.woff2');
+        font-weight: 100 800;
+      }
+      /* Mirrors src/styles/index.css tokens for this standalone review artifact. */
+      :root {
+        --surface: #eef2e9;
+        --chapter-dark: #06130e;
+        --sage-800: #4a5a50;
+        --sage-700: #5c6e61;
+        --line: #d3dcca;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--surface);
+        color: var(--chapter-dark);
+        font-family: Montserrat, sans-serif;
+      }
+      .review {
+        padding: 16px;
+        border-bottom: 1px solid var(--line);
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .review p {
+        margin: 0 0 12px;
+      }
+      button {
+        font: inherit;
+        padding: 8px 16px;
+        color: var(--chapter-dark);
+        background: transparent;
+        border: 1px solid var(--sage-700);
+        cursor: pointer;
+      }
+      button[aria-pressed='true'] {
+        background: var(--chapter-dark);
+        color: var(--surface);
+      }
+      :focus-visible {
+        outline: 3px solid var(--chapter-dark);
+        outline-offset: 4px;
+      }
+      main {
+        max-width: 1280px;
+        margin: auto;
+        padding: 64px 16px;
+      }
+      .intro {
+        display: grid;
+        gap: 24px;
+      }
+      .label,
+      .term {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--sage-700);
+        line-height: 1.7;
+      }
+      h1 {
+        font-size: 40px;
+        line-height: 0.95;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+        margin: 16px 0 0;
+        max-width: 13ch;
+        overflow-wrap: anywhere;
+      }
+      .description {
+        color: var(--sage-800);
+        line-height: 1.75;
+        margin: 0;
+        max-width: 55ch;
+      }
+      .term {
+        margin: 20px 0 0;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 48px 0 0;
+        display: grid;
+        gap: 24px;
+      }
+      li {
+        min-width: 0;
+        border: 1px solid var(--line);
+      }
+      .portrait {
+        aspect-ratio: 4 / 5;
+        background: var(--line);
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        text-align: center;
+        color: var(--sage-800);
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 14px;
+      }
+      .content {
+        padding: 24px;
+        overflow-wrap: anywhere;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.25;
+        margin: 0;
+      }
+      .role {
+        color: var(--sage-800);
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 12px 0 0;
+      }
+      .back {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        margin-top: 32px;
+        color: var(--chapter-dark);
+        text-underline-offset: 4px;
+      }
+      [lang='es'] .en,
+      [lang='en'] .es {
+        display: none;
+      }
+      @media (min-width: 640px) {
+        main {
+          padding-inline: 24px;
+        }
+        h1 {
+          font-size: 56px;
+        }
+        ul {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (min-width: 768px) {
+        main {
+          padding-block: 96px;
+        }
+      }
+      @media (min-width: 1024px) {
+        main {
+          padding-inline: 32px;
+        }
+        .intro {
+          grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+          align-items: end;
+          gap: 64px;
+        }
+        ul {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 32px;
+          margin-top: 64px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <aside class="review" aria-label="Design review">
+      <p>
+        <span class="es"
+          >Propuesta de diseño · Nombres y cargos de muestra; faltan la
+          directiva confirmada y las fotos aprobadas.</span
+        ><span class="en"
+          >Design proposal · Specimen names and roles; confirmed roster and
+          approved photos pending.</span
+        >
+      </p>
+      <button type="button" data-language="es" aria-pressed="true">
+        Español
+      </button>
+      <button type="button" data-language="en" aria-pressed="false">
+        English
+      </button>
+    </aside>
+    <main>
+      <header class="intro">
+        <div>
+          <p class="label">
+            <span class="es">Capítulo UPRM</span
+            ><span class="en">UPRM chapter</span>
+          </p>
+          <h1>
+            <span class="es">Conoce la directiva</span
+            ><span class="en">Meet the board</span>
+          </h1>
+        </div>
+        <div>
+          <p class="description">
+            <span class="es"
+              >Conoce a los estudiantes que organizan nuestro capítulo, conectan
+              a la comunidad y ayudan a crear oportunidades en el RUM.</span
+            ><span class="en"
+              >Meet the students who organize our chapter, connect our
+              community, and help create opportunities at UPRM.</span
+            >
+          </p>
+          <p class="term">
+            <span class="es">Periodo: pendiente de confirmación</span
+            ><span class="en">Board term: confirmation pending</span>
+          </p>
+        </div>
+      </header>
+      <ul>
+        <li>
+          <div class="portrait" aria-hidden="true">
+            <span class="es">Foto aprobada pendiente<br />Proporción 4:5</span
+            ><span class="en"
+              >Approved photo pending<br />4:5 aspect ratio</span
+            >
+          </div>
+          <div class="content">
+            <h2>
+              <span class="es">Nombre de muestra</span
+              ><span class="en">Specimen name</span>
+            </h2>
+            <p class="role">
+              <span class="es">Cargo por confirmar</span
+              ><span class="en">Role to be confirmed</span>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="portrait" aria-hidden="true">
+            <span class="es">Foto aprobada pendiente<br />Proporción 4:5</span
+            ><span class="en"
+              >Approved photo pending<br />4:5 aspect ratio</span
+            >
+          </div>
+          <div class="content">
+            <h2>
+              <span class="es">Nombre compuesto y dos apellidos de muestra</span
+              ><span class="en"
+                >Long compound specimen name with two surnames</span
+              >
+            </h2>
+            <p class="role">
+              <span class="es"
+                >Cargo extenso de coordinación y comunicaciones de muestra</span
+              ><span class="en"
+                >Long coordination and communications specimen role</span
+              >
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="portrait" aria-hidden="true">
+            <span class="es">Foto aprobada pendiente<br />Proporción 4:5</span
+            ><span class="en"
+              >Approved photo pending<br />4:5 aspect ratio</span
+            >
+          </div>
+          <div class="content">
+            <h2>
+              <span class="es">Otro nombre de muestra</span
+              ><span class="en">Another specimen name</span>
+            </h2>
+            <p class="role">
+              <span class="es">Cargo por confirmar</span
+              ><span class="en">Role to be confirmed</span>
+            </p>
+          </div>
+        </li>
+      </ul>
+      <a class="back" href="/#about"
+        ><span class="es">Volver a nosotros</span
+        ><span class="en">Back to about us</span></a
+      >
+    </main>
+    <script>
+      document.querySelectorAll('[data-language]').forEach((button) => {
+        button.addEventListener('click', () => {
+          document.documentElement.lang = button.dataset.language
+          document.querySelectorAll('[data-language]').forEach((choice) => {
+            choice.setAttribute('aria-pressed', String(choice === button))
+          })
+        })
+      })
+    </script>
+  </body>
+</html>
