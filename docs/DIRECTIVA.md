@@ -1,15 +1,19 @@
 # Directiva design and content handoff
 
 Issue: [#66](https://github.com/ColorStack-UPRM/ColorStack-UPRM-Website/issues/66).
-Implementation follows in #67. Status: proposed design; chapter content and approval pending.
+Implementation follows in #67. Status: F26 directory transcribed; page scope,
+display order, translated roles, portraits, and design approval pending.
 
 ## Deliverables
 
 - [Responsive bilingual layout preview](design/directiva.html): open the file in a
   browser and resize from 320px to desktop. Choose EN or ES to review both.
-  Cards contain explicit layout specimens, not real members or approved content.
-- [Roster intake](content/directiva-roster.csv): header-only until the chapter
-  supplies its confirmed roster. One row per member, in approved display order.
+  Cards use the 12 directory names with proposed bilingual roles and photo placeholders.
+- [Roster data](content/directiva-roster.csv): 12 unique people in source directory
+  order. Photo and approval fields remain blank pending approved assets.
+- [Source transcription](content/directiva-source.md): names, verbatim roles,
+  source grouping, term evidence, and source file fingerprint from the PDF supplied
+  by the repository owner. Personal contact columns are omitted.
 - [Design tokens](DESIGN-TOKENS.md): production implementation must reuse the
   existing tokens, Container, Heading, navigation, footer, and language provider.
 
@@ -36,7 +40,8 @@ Page vertical padding: 64px on mobile, 96px from 768px. Header-to-grid gap:
 roles are 16px with 1.5 line height. Allow both to wrap fully without truncation
 or fixed text heights. Keep the same order across widths and languages; do not
 give officers a different card size. Columns must use `minmax(0, 1fr)` to allow
-long names to wrap. The preview includes deliberately long specimen text.
+long names to wrap. The preview includes all directory names and roles, including
+the long dual-role titles for Normarie Martinez Flores and Josue C. Lopez Irizarry.
 
 ## Proposed bilingual copy
 
@@ -51,27 +56,23 @@ be hardcoded in the production component.
 | boardTerm                | Board term: {term}                                                                                        | Periodo de la directiva: {term}                                                                                            |
 | boardBack                | Back to about us                                                                                          | Volver a nosotros                                                                                                          |
 
-Suggested role translations below are a vocabulary for review, **not a claim
-about which positions exist**. Confirm each actual title with the chapter;
-preserve each member's preferred Spanish title and accents.
-
-| EN                      | ES (confirm preferred form)            |
-| ----------------------- | -------------------------------------- |
-| President               | Presidente / Presidenta                |
-| Vice President          | Vicepresidente / Vicepresidenta        |
-| Secretary               | Secretario / Secretaria                |
-| Treasurer               | Tesorero / Tesorera                    |
-| Communications Director | Director / Directora de Comunicaciones |
-| Technical Director      | Director Técnico / Directora Técnica   |
+Role translations are populated per person in the roster CSV and preview.
+They cover President, Vice President / Representative Lead, Secretary,
+Treasurer & Fundraising Committee Lead, StackWorks Lead, Event Coordinator,
+Fundraiser, and Representative. The source mixes EN/ES titles; confirm the
+proposed translations and preferred Spanish titles with the chapter.
 
 ## Roster and photo contract
 
 The CSV fields are `display_order`, `name`, `role_en`, `role_es`, `term`,
 `photo_path`, `photo_position`, `approved_by`, `approved_on`, and `source_url`.
-Use consecutive display positions starting at 1. Keep names verbatim in both
-languages. Record approval dates as YYYY-MM-DD and a traceable chapter source
-for the roster/photo approvals. Do not infer the term from today's date or
-sort members alphabetically unless the chapter approves that order.
+Use consecutive display positions starting at 1. Names and order currently
+follow the source directory; that order still needs public display approval.
+The `term` value is F26 verbatim from the PDF; no start/end dates are supplied.
+Keep names verbatim in both languages. Record photo/crop approval dates as
+YYYY-MM-DD; `approved_by` and `approved_on` stay blank until that approval exists.
+The `source_url` field currently holds the repository-relative source transcription
+path. It is provenance for names/roles, not evidence of photo approval.
 
 Proposed final asset directory: `public/images/board/` (not populated yet).
 Use stable lowercase filenames such as `<member-slug>.webp`, without private
@@ -89,15 +90,21 @@ set intrinsic width/height to 800/1000 to reserve space.
 
 ## Approval and verification still required
 
-- Chapter confirms the complete roster, exact names, bilingual role titles,
-  board term, display order, and photo/crop approval in a linked source.
-- Populate every CSV field and link all portrait files; no specimens in final
-  content. Verify every image opens and meets the portrait specification.
+- Chapter confirms page scope: the source lists four executive board members
+  and eight additional leaders/team members (12 unique people total). The draft
+  includes all 12; dual-role leaders appear once. Confirm public display order,
+  translated role titles, and whether F26 alone is the desired term label.
+- Supply approved portraits and populate photo/approval fields. Verify every
+  image opens and meets the portrait specification. The PDF has no photos.
+  The repository owner requested placeholders for now because portraits are not
+  ready; keep the review preview's placeholders until the assets are supplied.
 - Review the proposed design at 320, 375, 640, 1024, and 1440px in EN/ES,
   including the longest actual names and roles, 200% zoom, and keyboard focus.
 - Confirm no overflow, clipping, face cropping problems, or unexpected order
   changes. Review with the chapter before treating this as final for #67.
 
-No roster or approval source was present in the repository or issue when this
-handoff was prepared. These outstanding items prevent closing #66; the draft
-PR should reference it without an automatic closing keyword.
+The repository owner supplied `ColorStack F26 - Directiva Directorio.pdf` from
+their Desktop after the initial draft. All three pages were inspected; the
+accessible transcription above records the relevant content. Outstanding scope,
+asset, and approval items prevent closing #66; the draft PR should reference it
+without an automatic closing keyword.
