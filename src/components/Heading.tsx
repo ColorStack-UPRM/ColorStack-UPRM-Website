@@ -4,6 +4,7 @@ type HeadingLevel = 1 | 2 | 3
 
 type HeadingProps = HTMLAttributes<HTMLHeadingElement> & {
   level: HeadingLevel
+  variant?: 'default' | 'section'
   children: ReactNode
 }
 
@@ -15,6 +16,7 @@ const headingStyles: Record<HeadingLevel, string> = {
 
 export default function Heading({
   level,
+  variant = 'default',
   className = '',
   children,
   ...props
@@ -22,7 +24,10 @@ export default function Heading({
   const Element = `h${level}` as const
 
   return (
-    <Element {...props} className={`${headingStyles[level]} ${className}`}>
+    <Element
+      {...props}
+      className={`${variant === 'section' ? 'text-4xl leading-[0.95] font-extrabold tracking-tight uppercase text-chapter-dark sm:text-5xl lg:text-6xl' : headingStyles[level]} ${className}`}
+    >
       {children}
     </Element>
   )
