@@ -54,6 +54,10 @@ and approve the public display order.
 The source labels the term **F26**; it provides no explicit start/end dates.
 The draft uses F26 verbatim rather than assuming a date range.
 All three pages are text tables/lists; there are no portraits or photo links.
-Photo approval, crops, translated titles, and layout review remain outstanding.
+The owner subsequently supplied all 12 portraits from `ColorStack_Directive` on
+November 3, 2026, matching them by first-name filename and explicitly confirming
+`1788737984027.png` as Normarie Martinez Flores. The CSV links the copied files
+under `public/images/board/`; the HTML preview displays them in 4:5 CSS frames.
+Crop approval, translated titles, and layout review remain outstanding.
 Blank approval fields in the CSV refer to photo/crop approval, not to whether a
 person appears in this directory.

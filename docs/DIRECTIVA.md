@@ -2,15 +2,15 @@
 
 Issue: [#66](https://github.com/ColorStack-UPRM/ColorStack-UPRM-Website/issues/66).
 Implementation follows in #67. Status: F26 directory transcribed; page scope,
-display order, translated roles, portraits, and design approval pending.
+display order, translated roles, crop review, and design approval pending.
 
 ## Deliverables
 
 - [Responsive bilingual layout preview](design/directiva.html): open the file in a
   browser and resize from 320px to desktop. Choose EN or ES to review both.
-  Cards use the 12 directory names with proposed bilingual roles and photo placeholders.
+  Cards use the 12 directory names, supplied portraits, and proposed bilingual roles.
 - [Roster data](content/directiva-roster.csv): 12 unique people in source directory
-  order. Photo and approval fields remain blank pending approved assets.
+  order. All photo paths are populated; crop approval fields remain blank.
 - [Source transcription](content/directiva-source.md): names, verbatim roles,
   source grouping, term evidence, and source file fingerprint from the PDF supplied
   by the repository owner. Personal contact columns are omitted.
@@ -74,10 +74,16 @@ YYYY-MM-DD; `approved_by` and `approved_on` stay blank until that approval exist
 The `source_url` field currently holds the repository-relative source transcription
 path. It is provenance for names/roles, not evidence of photo approval.
 
-Proposed final asset directory: `public/images/board/` (not populated yet).
+Asset directory: `public/images/board/` (12 supplied portraits).
 Use stable lowercase filenames such as `<member-slug>.webp`, without private
 contact details. Store approved portraits in the repo so implementation does
 not depend on expiring social-media URLs.
+
+The owner supplied portraits on November 3, 2026, matched by first-name filenames,
+and explicitly confirmed `1788737984027.png` as Normarie Martinez Flores.
+Files are copied unchanged with stable member filenames. All are 800×800px
+except Jovalier's 560×560px image. Preserve these available originals; do not
+upscale them to satisfy the preferred future export size.
 
 Use 4:5 portrait frames across all widths, `object-fit: cover`, and per-member
 `object-position` (default `50% 35%`, adjust after review). Request originals at
@@ -86,7 +92,7 @@ Preserve faces and hair, use similar headroom and eye lines, and never stretch
 or synthesize missing portraits. Obtain approval for the selected photo and
 crop. Strip location metadata when preparing exports. Since each portrait is
 adjacent to its member's name, use `alt=""` to avoid repeating that name, and
-set intrinsic width/height to 800/1000 to reserve space.
+set intrinsic width/height to the actual file dimensions. CSS sets the 4:5 frame.
 
 ## Approval and verification still required
 
@@ -94,10 +100,9 @@ set intrinsic width/height to 800/1000 to reserve space.
   and eight additional leaders/team members (12 unique people total). The draft
   includes all 12; dual-role leaders appear once. Confirm public display order,
   translated role titles, and whether F26 alone is the desired term label.
-- Supply approved portraits and populate photo/approval fields. Verify every
-  image opens and meets the portrait specification. The PDF has no photos.
-  The repository owner requested placeholders for now because portraits are not
-  ready; keep the review preview's placeholders until the assets are supplied.
+- Review the supplied portraits in their CSS frames and approve the crops.
+  Photo paths are populated; `approved_by` and `approved_on` remain blank until
+  crop review. The supplied photos replace the earlier requested placeholders.
 - Review the proposed design at 320, 375, 640, 1024, and 1440px in EN/ES,
   including the longest actual names and roles, 200% zoom, and keyboard focus.
 - Confirm no overflow, clipping, face cropping problems, or unexpected order
