@@ -119,3 +119,17 @@ panel has a 164px minimum height and grows freely for longer text.
 
 The visible mockup omits the proposal notice and board-term label; the language
 toggle remains available. Term provenance stays in the roster data.
+
+## Editing the production page
+
+- `src/pages/Directiva.tsx` composes the shared layout components.
+- `src/components/BoardMemberCard.tsx` styles one member card with Tailwind.
+- `src/config/board.ts` is the typed member list; array order is display order.
+- `src/i18n/en.ts` and `src/i18n/es.ts` contain page copy and named role keys.
+
+For a new portrait, keep the original and export a full-size WebP plus a 400px
+variant without upscaling. Update its paths and intrinsic dimensions in the
+member list; adjust `photoPosition` only when the crop needs it. Portraits use
+empty alt text because the adjacent heading already names each person.
+The shared layout supplies the header, footer, localized page title, and anchor
+navigation. `/directiva` uses the existing SPA fallback for direct visits.

@@ -1,4 +1,22 @@
 export const es = {
+  boardPageTitle: 'Conoce la directiva',
+  boardTitleLead: 'Conoce',
+  boardTitleAccent: 'la directiva',
+  boardLabel: 'Capítulo UPRM',
+  boardIntro:
+    'Conoce a los estudiantes que organizan nuestro capítulo, conectan a la comunidad y ayudan a crear oportunidades en el RUM.',
+  boardTeam: 'Nuestro equipo',
+  boardPeople: 'personas',
+  boardBack: 'Volver a nosotros',
+  boardRolePresident: 'Presidente',
+  boardRoleVicePresident: 'Vicepresidenta / Líder de Representantes',
+  boardRoleSecretary: 'Secretario',
+  boardRoleTreasurer: 'Tesorero y Líder del Comité de Recaudación de Fondos',
+  boardRoleStackWorksLead: 'Líder de StackWorks',
+  boardRoleEventCoordinator: 'Coordinador de Eventos',
+  boardRoleFundraiser: 'Recaudador de Fondos',
+  boardRoleRepresentative: 'Representante',
+
   language: 'Idioma',
   spanish: 'Español',
   english: 'Inglés',
