@@ -181,19 +181,286 @@
           margin-top: 64px;
         }
       }
+
+      /* Match the production About, Button, HeroCards and NumberedRows styles. */
+      :root {
+        --chapter-green: #008b08;
+        --accent: #ff5a36;
+        --highlight: #3fcb82;
+      }
+      .review {
+        background: #fff;
+        padding: 16px max(16px, calc((100vw - 1216px) / 2));
+      }
+      .review p {
+        color: var(--sage-800);
+        font-size: 12px;
+      }
+      button {
+        min-height: 44px;
+        border-radius: 999px;
+        padding: 8px 20px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 12px;
+      }
+      button[aria-pressed='true'] {
+        background: var(--chapter-green);
+        border-color: var(--chapter-green);
+        color: #fff;
+      }
+      main {
+        max-width: none;
+        padding: 0;
+      }
+      .intro {
+        background: var(--chapter-dark);
+        color: #fff;
+        padding: 64px max(16px, calc((100vw - 1216px) / 2));
+        gap: 32px;
+      }
+      .label {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 0;
+        color: #ffffffbf;
+      }
+      .label::before {
+        content: '';
+        width: 32px;
+        height: 2px;
+        background: var(--accent);
+        flex-shrink: 0;
+      }
+      h1 {
+        font-size: clamp(40px, 5.5vw, 76px);
+        font-weight: 800;
+        letter-spacing: -0.035em;
+        margin-top: 24px;
+        max-width: 13ch;
+      }
+      h1 em {
+        font-style: normal;
+        color: var(--highlight);
+      }
+      .description {
+        color: #ffffffcc;
+        font-size: 16px;
+        line-height: 1.75;
+      }
+      .term {
+        display: inline-block;
+        border: 1px solid #ffffff40;
+        border-radius: 999px;
+        padding: 10px 16px;
+        color: #fff;
+        margin-top: 24px;
+        font-size: 11px;
+      }
+      .team {
+        max-width: 1280px;
+        margin: auto;
+        padding: 48px 16px 64px;
+      }
+      .team-heading {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 24px;
+      }
+      .team-heading h2 {
+        font-size: 24px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: -0.03em;
+      }
+      .team-heading p {
+        margin: 0;
+        color: var(--sage-700);
+        font:
+          11px 'JetBrains Mono',
+          monospace;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      ul {
+        margin-top: 32px;
+        counter-reset: member;
+        align-items: start;
+      }
+      li {
+        counter-increment: member;
+        border: 1px solid var(--chapter-dark);
+        border-radius: 24px;
+        overflow: hidden;
+        background: #fff;
+      }
+      img.portrait {
+        border-bottom: 1px solid var(--chapter-dark);
+      }
+      .content {
+        position: relative;
+        padding: 24px;
+      }
+      .content::before {
+        content: counter(member, decimal-leading-zero);
+        display: block;
+        margin-bottom: 16px;
+        font:
+          11px 'JetBrains Mono',
+          monospace;
+        letter-spacing: 0.15em;
+        color: var(--sage-700);
+      }
+      .content h2 {
+        font-size: 22px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: -0.03em;
+        line-height: 1.15;
+      }
+      .role {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .back {
+        border-radius: 999px;
+        background: var(--accent);
+        color: var(--chapter-dark);
+        padding: 14px 24px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-top: 40px;
+      }
+      .back:hover {
+        background: #f24e2a;
+      }
+      @media (min-width: 640px) {
+        .intro {
+          padding-inline: max(24px, calc((100vw - 1216px) / 2));
+        }
+        .team {
+          padding-inline: 24px;
+        }
+      }
+      @media (min-width: 768px) {
+        .intro {
+          padding-block: 96px;
+        }
+        .team {
+          padding-block: 64px 96px;
+        }
+      }
+      @media (min-width: 1024px) {
+        .intro {
+          grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+          padding-inline: max(32px, calc((100vw - 1216px) / 2));
+          gap: 64px;
+        }
+        .description {
+          font-size: 18px;
+        }
+        .team {
+          padding-inline: 32px;
+        }
+        ul {
+          margin-top: 40px;
+        }
+        .team-heading h2 {
+          font-size: 32px;
+        }
+      }
+      /* Layered green cards echo the homepage's stacked cards and bold labels. */
+      .team li {
+        position: relative;
+        padding: 12px 12px 0;
+        background: #12784a;
+        border: 1px solid #0c3b2a;
+        border-radius: 28px;
+        box-shadow: 0 5px 0 #0c3b2a;
+      }
+      .team img.portrait {
+        border: 1px solid #0c3b2a;
+        border-radius: 18px;
+        aspect-ratio: 4 / 5;
+      }
+      .team .content {
+        margin: 12px -12px 0;
+        padding: 24px;
+        background: #3fcb82;
+        border-top: 1px solid #0c3b2a;
+        min-height: 188px;
+      }
+      .team .content::before {
+        position: absolute;
+        top: -60px;
+        right: 12px;
+        display: grid;
+        place-items: center;
+        width: 36px;
+        height: 36px;
+        margin: 0;
+        border: 1px solid #0c3b2a;
+        border-radius: 50%;
+        background: #ff5a36;
+        color: #06130e;
+        font-weight: 700;
+      }
+      .team .content h2 {
+        color: #06130e;
+        font-size: clamp(22px, 2vw, 28px);
+        max-width: 20ch;
+      }
+      .team .role {
+        color: #0c3b2a;
+        margin-top: 16px;
+        padding-top: 12px;
+        border-top: 1px solid #0c3b2a40;
+        font-weight: 500;
+      }
+      @media (prefers-reduced-motion: no-preference) and (hover: hover) {
+        .team li {
+          transition:
+            transform 180ms ease,
+            box-shadow 180ms ease;
+        }
+        .team li:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 9px 0 #0c3b2a;
+        }
+      }
+      /* Compact density while keeping mobile names and roles readable. */
+      .team .content {
+        padding: 20px;
+        min-height: 164px;
+      }
+      .team .content h2 {
+        font-size: 22px;
+      }
+      .team .role {
+        font-size: 13px;
+        margin-top: 12px;
+        padding-top: 10px;
+      }
+      @media (min-width: 1200px) {
+        .team ul {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: 24px;
+        }
+        .team .content h2 {
+          font-size: 20px;
+        }
+      }
     </style>
   </head>
   <body>
     <aside class="review" aria-label="Design review">
-      <p>
-        <span class="es"
-          >Propuesta de diseño · Directorio F26: 12 personas; alcance, orden
-          público y revisión de recortes pendientes.</span
-        ><span class="en"
-          >Design proposal · F26 directory: 12 people; page scope, public order,
-          and crop review pending.</span
-        >
-      </p>
       <button type="button" data-language="es" aria-pressed="true">
         Español
       </button>
@@ -209,8 +476,8 @@
             ><span class="en">UPRM chapter</span>
           </p>
           <h1>
-            <span class="es">Conoce la directiva</span
-            ><span class="en">Meet the board</span>
+            <span class="es">Conoce<br /><em>la directiva</em></span
+            ><span class="en">Meet<br /><em>the board</em></span>
           </h1>
         </div>
         <div>
@@ -223,225 +490,233 @@
               community, and help create opportunities at UPRM.</span
             >
           </p>
-          <p class="term">
-            <span class="es">Periodo de la directiva: F26</span
-            ><span class="en">Board term: F26</span>
-          </p>
         </div>
       </header>
-      <ul>
-        <li>
-          <img
-            class="portrait"
-            src="../../public/images/board/anthony-torres.png"
-            alt=""
-            loading="lazy"
-            width="800"
-            height="800"
-          />
-          <div class="content">
-            <h2>Anthony Torres</h2>
-            <p class="role">
-              <span class="es">Presidente</span
-              ><span class="en">President</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <img
-            class="portrait"
-            src="../../public/images/board/normarie-martinez-flores.png"
-            alt=""
-            loading="lazy"
-            width="800"
-            height="800"
-          />
-          <div class="content">
-            <h2>Normarie Martinez Flores</h2>
-            <p class="role">
-              <span class="es">Vicepresidenta / Líder de Representantes</span
-              ><span class="en">Vice President / Representative Lead</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <img
-            class="portrait"
-            src="../../public/images/board/jovalier-ortiz-ramos.jpg"
-            alt=""
-            loading="lazy"
-            width="560"
-            height="560"
-          />
-          <div class="content">
-            <h2>Jovalier Ortiz Ramos</h2>
-            <p class="role">
-              <span class="es">Secretario</span
-              ><span class="en">Secretary</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <img
-            class="portrait"
-            src="../../public/images/board/josue-c-lopez-irizarry.png"
-            alt=""
-            loading="lazy"
-            width="800"
-            height="800"
-          />
-          <div class="content">
-            <h2>Josue C. Lopez Irizarry</h2>
-            <p class="role">
-              <span class="es"
-                >Tesorero y Líder del Comité de Recaudación de Fondos</span
-              ><span class="en"
-                >Treasurer &amp; Fundraising Committee Lead</span
-              >
-            </p>
-          </div>
-        </li>
-        <li>
-          <img
-            class="portrait"
-            src="../../public/images/board/josean-a-ralat.jpg"
-            alt=""
-            loading="lazy"
-            width="800"
-            height="800"
-          />
-          <div class="content">
-            <h2>Josean A. Ralat</h2>
-            <p class="role">
-              <span class="es">Líder de StackWorks</span
-              ><span class="en">StackWorks Lead</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <img
-            class="portrait"
-            src="../../public/images/board/alex-morales-trevisan.png"
-            alt=""
-            loading="lazy"
-            width="800"
-            height="800"
-          />
-          <div class="content">
-            <h2>Alex Morales Trevisan</h2>
-            <p class="role">
-              <span class="es">Coordinador de Eventos</span
-              ><span class="en">Event Coordinator</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <img
-            class="portrait"
-            src="../../public/images/board/edwin-j-cruz-martinez.png"
-            alt=""
-            loading="lazy"
-            width="800"
-            height="800"
-          />
-          <div class="content">
-            <h2>Edwin J. Cruz Martínez</h2>
-            <p class="role">
-              <span class="es">Recaudador de Fondos</span
-              ><span class="en">Fundraiser</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <img
-            class="portrait"
-            src="../../public/images/board/alec-a-rodriguez-velazquez.png"
-            alt=""
-            loading="lazy"
-            width="800"
-            height="800"
-          />
-          <div class="content">
-            <h2>Alec A. Rodríguez Velázquez</h2>
-            <p class="role">
-              <span class="es">Recaudador de Fondos</span
-              ><span class="en">Fundraiser</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <img
-            class="portrait"
-            src="../../public/images/board/alondra-soto-feliciano.png"
-            alt=""
-            loading="lazy"
-            width="800"
-            height="800"
-          />
-          <div class="content">
-            <h2>Alondra Soto Feliciano</h2>
-            <p class="role">
-              <span class="es">Representante</span
-              ><span class="en">Representative</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <img
-            class="portrait"
-            src="../../public/images/board/andrea-p-segarra-felix.jpg"
-            alt=""
-            loading="lazy"
-            width="800"
-            height="800"
-          />
-          <div class="content">
-            <h2>Andrea P. Segarra Félix</h2>
-            <p class="role">
-              <span class="es">Representante</span
-              ><span class="en">Representative</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <img
-            class="portrait"
-            src="../../public/images/board/daniel-f-munoz-valenzuela.jpg"
-            alt=""
-            loading="lazy"
-            width="800"
-            height="800"
-          />
-          <div class="content">
-            <h2>Daniel F. Muñoz Valenzuela</h2>
-            <p class="role">
-              <span class="es">Representante</span
-              ><span class="en">Representative</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <img
-            class="portrait"
-            src="../../public/images/board/kevin-s-beltran-pena.png"
-            alt=""
-            loading="lazy"
-            width="800"
-            height="800"
-          />
-          <div class="content">
-            <h2>Kevin S. Beltrán Peña</h2>
-            <p class="role">
-              <span class="es">Representante</span
-              ><span class="en">Representative</span>
-            </p>
-          </div>
-        </li>
-      </ul>
-      <a class="back" href="/#about"
-        ><span class="es">Volver a nosotros</span
-        ><span class="en">Back to about us</span></a
-      >
+      <section class="team" aria-labelledby="team-title">
+        <div class="team-heading">
+          <h2 id="team-title">
+            <span class="es">Nuestro equipo</span
+            ><span class="en">Our team</span>
+          </h2>
+          <p>
+            <span class="es">12 personas · F26</span
+            ><span class="en">12 people · F26</span>
+          </p>
+        </div>
+        <ul>
+          <li>
+            <img
+              class="portrait"
+              src="../../public/images/board/anthony-torres.png"
+              alt=""
+              loading="lazy"
+              width="800"
+              height="800"
+            />
+            <div class="content">
+              <h2>Anthony Torres</h2>
+              <p class="role">
+                <span class="es">Presidente</span
+                ><span class="en">President</span>
+              </p>
+            </div>
+          </li>
+          <li>
+            <img
+              class="portrait"
+              src="../../public/images/board/normarie-martinez-flores.png"
+              alt=""
+              loading="lazy"
+              width="800"
+              height="800"
+            />
+            <div class="content">
+              <h2>Normarie Martinez Flores</h2>
+              <p class="role">
+                <span class="es">Vicepresidenta / Líder de Representantes</span
+                ><span class="en">Vice President / Representative Lead</span>
+              </p>
+            </div>
+          </li>
+          <li>
+            <img
+              class="portrait"
+              src="../../public/images/board/jovalier-ortiz-ramos.jpg"
+              alt=""
+              loading="lazy"
+              width="560"
+              height="560"
+            />
+            <div class="content">
+              <h2>Jovalier Ortiz Ramos</h2>
+              <p class="role">
+                <span class="es">Secretario</span
+                ><span class="en">Secretary</span>
+              </p>
+            </div>
+          </li>
+          <li>
+            <img
+              class="portrait"
+              src="../../public/images/board/josue-c-lopez-irizarry.png"
+              alt=""
+              loading="lazy"
+              width="800"
+              height="800"
+            />
+            <div class="content">
+              <h2>Josue C. Lopez Irizarry</h2>
+              <p class="role">
+                <span class="es"
+                  >Tesorero y Líder del Comité de Recaudación de Fondos</span
+                ><span class="en"
+                  >Treasurer &amp; Fundraising Committee Lead</span
+                >
+              </p>
+            </div>
+          </li>
+          <li>
+            <img
+              class="portrait"
+              src="../../public/images/board/josean-a-ralat.jpg"
+              alt=""
+              loading="lazy"
+              width="800"
+              height="800"
+            />
+            <div class="content">
+              <h2>Josean A. Ralat</h2>
+              <p class="role">
+                <span class="es">Líder de StackWorks</span
+                ><span class="en">StackWorks Lead</span>
+              </p>
+            </div>
+          </li>
+          <li>
+            <img
+              class="portrait"
+              src="../../public/images/board/alex-morales-trevisan.png"
+              alt=""
+              loading="lazy"
+              width="800"
+              height="800"
+            />
+            <div class="content">
+              <h2>Alex Morales Trevisan</h2>
+              <p class="role">
+                <span class="es">Coordinador de Eventos</span
+                ><span class="en">Event Coordinator</span>
+              </p>
+            </div>
+          </li>
+          <li>
+            <img
+              class="portrait"
+              src="../../public/images/board/edwin-j-cruz-martinez.png"
+              alt=""
+              loading="lazy"
+              width="800"
+              height="800"
+            />
+            <div class="content">
+              <h2>Edwin J. Cruz Martínez</h2>
+              <p class="role">
+                <span class="es">Recaudador de Fondos</span
+                ><span class="en">Fundraiser</span>
+              </p>
+            </div>
+          </li>
+          <li>
+            <img
+              class="portrait"
+              src="../../public/images/board/alec-a-rodriguez-velazquez.png"
+              alt=""
+              loading="lazy"
+              width="800"
+              height="800"
+            />
+            <div class="content">
+              <h2>Alec A. Rodríguez Velázquez</h2>
+              <p class="role">
+                <span class="es">Recaudador de Fondos</span
+                ><span class="en">Fundraiser</span>
+              </p>
+            </div>
+          </li>
+          <li>
+            <img
+              class="portrait"
+              src="../../public/images/board/alondra-soto-feliciano.png"
+              alt=""
+              loading="lazy"
+              width="800"
+              height="800"
+            />
+            <div class="content">
+              <h2>Alondra Soto Feliciano</h2>
+              <p class="role">
+                <span class="es">Representante</span
+                ><span class="en">Representative</span>
+              </p>
+            </div>
+          </li>
+          <li>
+            <img
+              class="portrait"
+              src="../../public/images/board/andrea-p-segarra-felix.jpg"
+              alt=""
+              loading="lazy"
+              width="800"
+              height="800"
+            />
+            <div class="content">
+              <h2>Andrea P. Segarra Félix</h2>
+              <p class="role">
+                <span class="es">Representante</span
+                ><span class="en">Representative</span>
+              </p>
+            </div>
+          </li>
+          <li>
+            <img
+              class="portrait"
+              src="../../public/images/board/daniel-f-munoz-valenzuela.jpg"
+              alt=""
+              loading="lazy"
+              width="800"
+              height="800"
+            />
+            <div class="content">
+              <h2>Daniel F. Muñoz Valenzuela</h2>
+              <p class="role">
+                <span class="es">Representante</span
+                ><span class="en">Representative</span>
+              </p>
+            </div>
+          </li>
+          <li>
+            <img
+              class="portrait"
+              src="../../public/images/board/kevin-s-beltran-pena.png"
+              alt=""
+              loading="lazy"
+              width="800"
+              height="800"
+            />
+            <div class="content">
+              <h2>Kevin S. Beltrán Peña</h2>
+              <p class="role">
+                <span class="es">Representante</span
+                ><span class="en">Representative</span>
+              </p>
+            </div>
+          </li>
+        </ul>
+        <a class="back" href="/#about"
+          ><span class="es">Volver a nosotros</span
+          ><span class="en">Back to about us</span></a
+        >
+      </section>
     </main>
     <script>
       document.querySelectorAll('[data-language]').forEach((button) => {
