@@ -72,7 +72,7 @@ export default function Home() {
         
       </Hero>
 
-      <About />
+      <About boardLinkTo="/directiva" />
 
       {/* What We Do section */}
       <WhatWeDo />

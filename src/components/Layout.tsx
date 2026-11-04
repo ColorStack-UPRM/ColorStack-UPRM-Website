@@ -6,16 +6,18 @@ import Footer from './Footer'
 import { membershipLink, primaryNavigation } from '../config/navigation'
 import Container from './Container'
 
-
-const fullBleedPaths = new Set(['/', membershipLink.to])
+const fullBleedPaths = new Set(['/', membershipLink.to, '/directiva'])
 
 export default function Layout() {
   const { t } = useTranslation()
   const location = useLocation()
   const pathname = location.pathname.replace(/\/+$/, '').toLowerCase() || '/'
   const titleKey =
-    [...primaryNavigation, membershipLink].find(({ to }) => to === pathname)
-      ?.label ?? 'notFound'
+    pathname === '/directiva'
+      ? 'boardPageTitle'
+      : ([...primaryNavigation, membershipLink].find(
+          ({ to }) => to === pathname,
+        )?.label ?? 'notFound')
 
   return (
     <div className="flex min-h-dvh flex-col bg-chapter-white text-ink">

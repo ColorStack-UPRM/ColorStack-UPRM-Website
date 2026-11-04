@@ -1,6 +1,24 @@
 import type { TranslationKey } from './es'
 
 export const en = {
+  boardPageTitle: 'Meet the board',
+  boardTitleLead: 'Meet',
+  boardTitleAccent: 'the board',
+  boardLabel: 'UPRM chapter',
+  boardIntro:
+    'Meet the students who organize our chapter, connect our community, and help create opportunities at UPRM.',
+  boardTeam: 'Our team',
+  boardPeople: 'people',
+  boardBack: 'Back to about us',
+  boardRolePresident: 'President',
+  boardRoleVicePresident: 'Vice President / Representative Lead',
+  boardRoleSecretary: 'Secretary',
+  boardRoleTreasurer: 'Treasurer & Fundraising Committee Lead',
+  boardRoleStackWorksLead: 'StackWorks Lead',
+  boardRoleEventCoordinator: 'Event Coordinator',
+  boardRoleFundraiser: 'Fundraiser',
+  boardRoleRepresentative: 'Representative',
+
   language: 'Language',
   spanish: 'Spanish',
   english: 'English',
