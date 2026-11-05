@@ -127,6 +127,21 @@ export const es = {
   whatWeDoHeadline: 'El semestre, capa por capa',
   whatWeDoIntro:
     'Todo lo que hacemos cae en una de estas cuatro capas. Cada actividad del semestre sube al equipo un nivel.',
+
+  // Events section
+  eventsLabel: 'Agenda',
+  eventsHeadline: 'Este semestre',
+  eventsSemester: 'Agosto – diciembre 2026 · Abierto a todo el Colegio',
+  eventsEmptyMessage:
+    'Todavía no hay eventos este semestre. Síguenos en Instagram para enterarte primero.',
+  eventsPastLabel: 'Evento pasado',
+  eventsActionStopBy: 'Pasa por la mesa',
+  eventsActionReserve: 'Reserva tu espacio',
+  eventsActionBringLaptop: 'Trae tu laptop',
+  eventsActionComeSee: 'Ven a ver',
+  eventsActionComeEarly: 'Llega temprano para asegurar tu espacio',
+  eventsInstagramLead: 'Lo de última hora sale primero en Instagram.',
+  eventsInstagramBody: 'Cambios de salón, invitados y fotos del semestre.',
 }
 
 export type TranslationKey = keyof typeof es
