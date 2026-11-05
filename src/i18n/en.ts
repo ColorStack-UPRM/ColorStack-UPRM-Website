@@ -114,6 +114,25 @@ export const en = {
   correctEmail: 'Use your UPRM email address',
   moreInfo: 'Get more info →',
 
+    // Membership FAQ (back of card)
+    faqTitle: 'FAQ',
+    faqBack: '← Back',
+    faqMajorQuestion: 'Do I have to study computer science?',
+    faqMajorAnswer:
+      'No. The chapter is open to students in INSO, ICOM, CIIC, mathematics, and any other UPRM program with an interest in technology. If you’re starting from scratch, even better: the workshops are designed for that.',
+    faqCostQuestion: 'Does membership cost anything?',
+    faqCostAnswer:
+      'No. Chapter membership is free. Workshops, mentorship, and events are covered with support from our sponsors.',
+    faqNationalQuestion: 'Do I have to be a ColorStack National member?',
+    faqNationalAnswer:
+      'It’s not required to participate in the chapter, but we recommend it: national membership gives you access to their community, opportunity board, and scholarship programs. We’ll help you with the application.',
+    faqTimeQuestion: 'How much time do I need to commit?',
+    faqTimeAnswer:
+      'As a member, whatever you can: meetings are every two weeks and workshops are optional. If you join a StackWorks project or the board, expect about 3 to 5 hours per week.',
+    faqAlumniQuestion: 'I’m a UPRM alum. How can I help?',
+    faqAlumniAnswer:
+      'You can be a mentor, lead a workshop, or connect us with your company’s recruiting team. Write to us and we’ll coordinate.',
+
   // What we do rows
   whatWeDoWorkshopsTitle: 'Technical workshops',
   whatWeDoWorkshopsDescription:

@@ -91,3 +91,35 @@ body {
     translate: none;
   }
 }
+
+/* Membership card flip */
+.membership-card {
+  perspective: 1600px;
+}
+
+.membership-card-inner {
+  display: grid;
+  transform-style: preserve-3d;
+  transition: transform 600ms ease;
+}
+
+.membership-card.is-flipped .membership-card-inner {
+  transform: rotateY(180deg);
+}
+
+.membership-card-face {
+  grid-area: 1 / 1;
+  min-width: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.membership-card-back {
+  transform: rotateY(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .membership-card-inner {
+    transition: none;
+  }
+}

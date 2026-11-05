@@ -111,6 +111,25 @@ export const es = {
   correctEmail: 'Usa tu correo electrónico de UPRM',
   moreInfo: 'Más información →',
 
+    // Membership FAQ (back of card)
+    faqTitle: 'Preguntas frecuentes',
+    faqBack: '← Volver',
+    faqMajorQuestion: '¿Tengo que estudiar ciencias de computación?',
+    faqMajorAnswer:
+      'No. El capítulo está abierto a estudiantes de INSO, ICOM, CIIC, matemáticas y cualquier otro programa del Colegio con interés en tecnología. Si estás empezando de cero, mejor todavía: los talleres están diseñados para eso.',
+    faqCostQuestion: '¿Cuesta algo ser miembro?',
+    faqCostAnswer:
+      'No. La membresía del capítulo es gratis. Los talleres, la mentoría y los eventos se cubren con el apoyo de nuestros sponsors.',
+    faqNationalQuestion: '¿Tengo que ser miembro de ColorStack nacional?',
+    faqNationalAnswer:
+      'No es requisito para participar en el capítulo, pero te lo recomendamos: la membresía nacional te da acceso a su comunidad, su bolsa de oportunidades y sus programas de becas. Te ayudamos con la solicitud.',
+    faqTimeQuestion: '¿Cuánto tiempo tengo que dedicarle?',
+    faqTimeAnswer:
+      'Como miembro, lo que puedas: las reuniones son cada dos semanas y los talleres son opcionales. Si entras a un proyecto de StackWorks o a la directiva, contamos con unas 3 a 5 horas por semana.',
+    faqAlumniQuestion: 'Soy egresado del Colegio. ¿Cómo ayudo?',
+    faqAlumniAnswer:
+      'Puedes ser mentor, dar un taller o conectarnos con el equipo de reclutamiento de tu empresa. Escríbenos y coordinamos.',
+
   // What we do rows
   whatWeDoWorkshopsTitle: 'Talleres técnicos',
   whatWeDoWorkshopsDescription:
