@@ -1,4 +1,5 @@
 import LanguageToggle from './LanguageToggle'
+import useActiveHomeSection from '../hooks/useActiveHomeSection'
 import { useTranslation } from '../i18n/useTranslation'
 import { useRef, useState } from 'react'
 import Brand from './Brand'
@@ -10,11 +11,14 @@ import { membershipLink, primaryNavigation } from '../config/navigation'
 export default function Navbar() {
   const { t } = useTranslation()
   const [open, setOpen] = useState(false)
+  const headerRef = useRef<HTMLElement>(null)
+  const activeTo = useActiveHomeSection(headerRef, open)
   const toggleRef = useRef<HTMLButtonElement>(null)
   const closeNavigation = () => setOpen(false)
 
   return (
     <header
+      ref={headerRef}
       className="sticky top-0 z-20 border-b border-chapter-green/15 bg-chapter-white"
       onKeyDown={(event) => {
         if (event.key === 'Escape' && open) {
@@ -66,6 +70,7 @@ export default function Navbar() {
         >
           <NavigationLinks
             items={primaryNavigation}
+            activeTo={activeTo}
             onNavigate={closeNavigation}
           />
           <Button
