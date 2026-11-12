@@ -5,7 +5,9 @@ and working out past and upcoming status automatically, is the job of the events
 issue. This file is the source content only.
 
 All dates are from this fall semester (2026) and all times are AST. Rows are listed in
-display order (see Display notes).
+display order (see Display notes). Status values reflect the original November 4–5
+planning snapshot, not the current date; derive live status from confirmed event
+start/end timestamps when integrating the data.
 
 | Date      | Time     | Title (ES)                                                                    | Title (EN)                                              | Location | Action key                | Status   |
 | --------- | -------- | ----------------------------------------------------------------------------- | ------------------------------------------------------- | -------- | ------------------------- | -------- |
@@ -55,4 +57,15 @@ Past events never show an action, so the past events above don't need one.
 
 ## Still to confirm
 
-- Deside if we should add participation links/QR code implementation since most events come with one.
+- Confirm event end times and participation URLs with the organizers; neither is
+  recorded here yet. Do not infer end times or invent registration links.
+- Decide whether participation links should also be presented as QR codes.
+- Keep issue #68 open until these content details and the mobile layout are
+  linked there.
+
+## Publication
+
+The agenda components are ready for data integration, but are not mounted on the
+homepage and Events navigation remains unavailable. Publish them together with
+the confirmed event data so the live site does not claim this semester has no
+events.

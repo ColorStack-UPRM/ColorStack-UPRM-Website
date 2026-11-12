@@ -5,7 +5,6 @@ import { useTranslation } from '../i18n/useTranslation'
 import Button from '../components/Button'
 import HeroCards from '../components/HeroCards'
 import { heroCards } from '../config/heroCards'
-import Events from './Events'
 
 export default function Home() {
   const { t } = useTranslation()
@@ -78,7 +77,6 @@ export default function Home() {
       {/* What We Do section */}
       <WhatWeDo />
 
-      <Events />
     </>
   )
 }
