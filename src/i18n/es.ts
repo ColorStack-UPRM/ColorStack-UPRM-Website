@@ -1,4 +1,22 @@
 export const es = {
+  boardPageTitle: 'Conoce la directiva',
+  boardTitleLead: 'Conoce',
+  boardTitleAccent: 'la directiva',
+  boardLabel: 'Capítulo UPRM',
+  boardIntro:
+    'Conoce a los estudiantes que organizan nuestro capítulo, conectan a la comunidad y ayudan a crear oportunidades en el RUM.',
+  boardTeam: 'Nuestro equipo',
+  boardPeople: 'personas',
+  boardBack: 'Volver a nosotros',
+  boardRolePresident: 'Presidente',
+  boardRoleVicePresident: 'Vicepresidenta / Líder de Representantes',
+  boardRoleSecretary: 'Secretario',
+  boardRoleTreasurer: 'Tesorero y Líder del Comité de Recaudación de Fondos',
+  boardRoleStackWorksLead: 'Líder de StackWorks',
+  boardRoleEventCoordinator: 'Coordinador de Eventos',
+  boardRoleFundraiser: 'Recaudador de Fondos',
+  boardRoleRepresentative: 'Representante',
+
   language: 'Idioma',
   spanish: 'Español',
   english: 'Inglés',
@@ -26,6 +44,25 @@ export const es = {
   becomeSponsor: 'Auspicia el capítulo',
   builtBy: 'Creado por StackWorks',
   description: 'ColorStack UPRM | Capítulo de ColorStack en Mayagüez.',
+
+  // About section
+  aboutLabel: 'Quiénes somos',
+  aboutHeadline: 'Más de los nuestros',
+  aboutHeadlineHighlight: 'entran, se quedan y llegan',
+  aboutNationalMission:
+    'ColorStack es una organización sin fines de lucro que trabaja para aumentar la entrada, la retención y el éxito de estudiantes Black y Latinx en ciencias de computación.',
+  aboutChapterMission:
+    'El capítulo del RUM lleva esa misión al Colegio: un grupo de estudiantes que se organiza para que nadie tenga que averiguar solo cómo se consigue un internship, cómo se prepara una entrevista o a quién se le pregunta.',
+  aboutEntryTitle: 'Entrada',
+  aboutEntryDescription:
+    'Le enseñamos el camino a estudiantes de primer y segundo año antes de que se sientan tarde.',
+  aboutRetentionTitle: 'Retención',
+  aboutRetentionDescription:
+    'Grupos de estudio y mentoría para los cursos que sacan gente del programa.',
+  aboutSuccessTitle: 'Éxito',
+  aboutSuccessDescription:
+    'Práctica de entrevistas, revisión de résumé y contacto directo con reclutadores.',
+  aboutMeetBoard: 'Conoce la directiva',
 
   // Hero text section
   campus: 'RECINTO UNIVERSITARIO DE MAYAGÜEZ',
@@ -96,13 +133,13 @@ export const es = {
   // What we do rows
   whatWeDoWorkshopsTitle: 'Talleres técnicos',
   whatWeDoWorkshopsDescription:
-    'Git y GitHub, fundamentos de web, algoritmos y práctica de LeetCode. Se hacen en el salón y quedan grabados.',
+    'Git y GitHub, fundamentos de web, algoritmos y práctica de LeetCode. Los talleres quedan grabados.',
   whatWeDoStackWorksTitle: 'StackWorks',
   whatWeDoStackWorksDescription:
     'El brazo del capítulo que planifica y construye. Trabajamos en sprints de dos semanas, con board público y código abierto.',
   whatWeDoMentorshipTitle: 'Mentoría y comunidad',
   whatWeDoMentorshipDescription:
-    'Egresados del Colegio que ya están en la industria acompañan a estudiantes durante el semestre completo.',
+    'Conecta con egresados del Colegio y otros estudiantes para compartir experiencias y orientarte en tu camino hacia la industria.',
   whatWeDoCareerTitle: 'Preparación de carrera',
   whatWeDoCareerDescription:
     'Clínicas de résumé antes del career fair, simulacros de entrevista y guía para aplicar a internships a tiempo.',

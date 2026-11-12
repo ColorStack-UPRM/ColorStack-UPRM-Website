@@ -1,4 +1,5 @@
 import Hero from '../components/Hero'
+import About from './About'
 import WhatWeDo from './WhatWeDo'
 import { useTranslation } from '../i18n/useTranslation'
 import Button from '../components/Button'
@@ -70,6 +71,8 @@ export default function Home() {
 
         
       </Hero>
+
+      <About boardLinkTo="/directiva" />
 
       {/* What We Do section */}
       <WhatWeDo />

@@ -1,6 +1,24 @@
 import type { TranslationKey } from './es'
 
 export const en = {
+  boardPageTitle: 'Meet the board',
+  boardTitleLead: 'Meet',
+  boardTitleAccent: 'the board',
+  boardLabel: 'UPRM chapter',
+  boardIntro:
+    'Meet the students who organize our chapter, connect our community, and help create opportunities at UPRM.',
+  boardTeam: 'Our team',
+  boardPeople: 'people',
+  boardBack: 'Back to about us',
+  boardRolePresident: 'President',
+  boardRoleVicePresident: 'Vice President / Representative Lead',
+  boardRoleSecretary: 'Secretary',
+  boardRoleTreasurer: 'Treasurer & Fundraising Committee Lead',
+  boardRoleStackWorksLead: 'StackWorks Lead',
+  boardRoleEventCoordinator: 'Event Coordinator',
+  boardRoleFundraiser: 'Fundraiser',
+  boardRoleRepresentative: 'Representative',
+
   language: 'Language',
   spanish: 'Spanish',
   english: 'English',
@@ -28,6 +46,25 @@ export const en = {
   becomeSponsor: 'Become a Sponsor',
   builtBy: 'Built by StackWorks',
   description: 'ColorStack UPRM | Mayagüez Chapter of ColorStack.',
+
+  // About section
+  aboutLabel: 'Who we are',
+  aboutHeadline: 'More of us',
+  aboutHeadlineHighlight: 'get in, stay and succeed',
+  aboutNationalMission:
+    'ColorStack is a nonprofit organization working to increase the entry, retention, and success of Black and Latinx students in computer science.',
+  aboutChapterMission:
+    'The UPRM chapter brings that mission to campus: students working together so no one has to figure out alone how to land an internship, prepare for an interview, or whom to ask for help.',
+  aboutEntryTitle: 'Entry',
+  aboutEntryDescription:
+    'We show first- and second-year students the way before they feel like they are too late.',
+  aboutRetentionTitle: 'Retention',
+  aboutRetentionDescription:
+    'Study groups and mentorship for the courses that push students out of the program.',
+  aboutSuccessTitle: 'Success',
+  aboutSuccessDescription:
+    'Interview practice, résumé reviews, and direct contact with recruiters.',
+  aboutMeetBoard: 'Meet the board',
 
   // Hero text section
   campus: 'UNIVERSITY OF PUERTO RICO AT MAYAGÜEZ',
@@ -99,13 +136,13 @@ export const en = {
   // What we do rows
   whatWeDoWorkshopsTitle: 'Technical workshops',
   whatWeDoWorkshopsDescription:
-    'Git and GitHub, web fundamentals, algorithms, and LeetCode practice. Sessions take place in the classroom and are recorded.',
+    'Git and GitHub, web fundamentals, algorithms, and LeetCode practice. Sessions are recorded.',
   whatWeDoStackWorksTitle: 'StackWorks',
   whatWeDoStackWorksDescription:
     'The chapter’s team for planning and building. We work in two-week sprints with a public board and open-source code.',
   whatWeDoMentorshipTitle: 'Mentorship and community',
   whatWeDoMentorshipDescription:
-    'UPRM alumni working in the industry mentor students throughout the semester.',
+    'Connect with UPRM alumni and fellow students to share experiences and find guidance on your path into the industry.',
   whatWeDoCareerTitle: 'Career preparation',
   whatWeDoCareerDescription:
     'Résumé clinics before the career fair, mock interviews, and guidance on applying for internships on time.',

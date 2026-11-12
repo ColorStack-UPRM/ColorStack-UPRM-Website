@@ -12,7 +12,7 @@ type HomeSection = {
 }
 
 export const homeSections = [
-  { id: 'about', label: 'about', available: false },
+  { id: 'about', label: 'about', available: true },
   { id: 'what-we-do', label: 'whatWeDo', available: true },
   { id: 'initiatives', label: 'initiatives', available: false },
   { id: 'events', label: 'events', available: false },

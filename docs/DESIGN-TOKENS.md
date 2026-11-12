@@ -49,6 +49,9 @@ export default function ExampleSection() {
 renders a router link with `to`, an external link with `href`, or a native
 button when neither is provided. Its variants are `coral`, `outline`, and `header`.
 
+Use `<Heading level={2} variant="section">` for the mockup's large uppercase
+section headings. The visual variant is independent of the semantic heading level.
+
 ---
 
 ## Colors
