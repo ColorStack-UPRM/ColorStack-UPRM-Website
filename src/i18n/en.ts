@@ -130,4 +130,19 @@ export const en = {
   whatWeDoHeadline: 'The semester, layer by layer',
   whatWeDoIntro:
     'Everything we do falls into one of these four layers. Each activity throughout the semester takes the team up a level.',
+
+  // Events section
+  eventsLabel: 'Agenda',
+  eventsHeadline: 'This semester',
+  eventsSemester: 'August – December 2026 · Open to all of UPRM',
+  eventsEmptyMessage:
+    'No events scheduled this semester yet. Follow us on Instagram to hear first.',
+  eventsPastLabel: 'Past event',
+  eventsActionStopBy: 'Stop by our table',
+  eventsActionReserve: 'Save your spot',
+  eventsActionBringLaptop: 'Bring your laptop',
+  eventsActionComeSee: 'Come see it',
+  eventsActionComeEarly: 'Come early to secure a spot',
+  eventsInstagramLead: 'Last-minute updates hit Instagram first.',
+  eventsInstagramBody: 'Room changes, guests, and photos from the semester.',
 } satisfies Record<TranslationKey, string>
