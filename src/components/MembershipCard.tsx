@@ -30,17 +30,16 @@ export default function MembershipCard() {
   // True while an open question is collapsing before the card flips back.
   const [isClosingToFlip, setIsClosingToFlip] = useState(false)
 
-  const frontHeadingRef = useRef<HTMLHeadingElement>(null)
+  const moreInfoRef = useRef<HTMLButtonElement>(null)
   const backHeadingRef = useRef<HTMLHeadingElement>(null)
   const hasFlipped = useRef(false)
   const flipTimeout = useRef<number | undefined>(undefined)
 
-  // After a flip, move focus to the heading of the side now showing so
-  // keyboard and screen reader users land on the new content.
+  // Focus the FAQ heading on entry and restore the trigger on return.
   useEffect(() => {
     if (!hasFlipped.current) return
-    const heading = isFlipped ? backHeadingRef : frontHeadingRef
-    heading.current?.focus({ preventScroll: true })
+    const target = isFlipped ? backHeadingRef.current : moreInfoRef.current
+    target?.focus({ preventScroll: true })
   }, [isFlipped])
 
   // Don't leave a pending flip running if the page changes mid-collapse.
@@ -80,7 +79,7 @@ export default function MembershipCard() {
       <div className="membership-card-inner">
         {/* ---------- Front: apply ---------- */}
         <div className={`${faceClassName} justify-center`} inert={isFlipped}>
-          <h2 ref={frontHeadingRef} tabIndex={-1} className={titleClassName}>
+          <h2 className={titleClassName}>
             {t('callToAction')}
           </h2>
 
@@ -110,7 +109,12 @@ export default function MembershipCard() {
           </div>
 
           <div className="border-t border-line pt-5 text-center">
-            <button type="button" onClick={flip} className={textButtonClassName}>
+            <button
+              ref={moreInfoRef}
+              type="button"
+              onClick={flip}
+              className={textButtonClassName}
+            >
               {t('moreInfo')}
             </button>
           </div>
