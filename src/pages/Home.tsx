@@ -76,6 +76,7 @@ export default function Home() {
 
       {/* What We Do section */}
       <WhatWeDo />
+
     </>
   )
 }
