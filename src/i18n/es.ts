@@ -24,6 +24,22 @@ export const es = {
   about: 'Nosotros',
   whatWeDo: 'Qué hacemos',
   initiatives: 'Iniciativas',
+  initiativesHeadline: 'Ideas que se vuelven equipo',
+  initiativesIntro:
+    'Espacios para construir, aprender y prepararnos juntos para lo que viene después del Colegio.',
+  initiativesParticipate: 'Participa',
+  initiativesStackWorksTitle: 'StackWorks',
+  initiativesStackWorksDescription:
+    'El brazo del capítulo que planifica y construye. Trabajamos en sprints de dos semanas, con board público y código abierto.',
+  initiativesWorkshopsTitle: 'Talleres técnicos',
+  initiativesWorkshopsDescription:
+    'Git y GitHub, fundamentos de web, algoritmos y práctica de entrevistas técnicas.',
+  initiativesMentorshipTitle: 'Mentoría y comunidad',
+  initiativesMentorshipDescription:
+    'Egresados del Colegio acompañan a estudiantes durante el semestre, compartiendo experiencias y orientación.',
+  initiativesCareerTitle: 'Preparación de carrera',
+  initiativesCareerDescription:
+    'Clínicas de résumé, simulacros de entrevista y guía para aplicar a internships a tiempo.',
   events: 'Eventos',
   sponsors: 'Auspiciadores',
   notFound: '404 — Página no encontrada',
