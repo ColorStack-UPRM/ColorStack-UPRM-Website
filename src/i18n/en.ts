@@ -26,6 +26,22 @@ export const en = {
   about: 'About',
   whatWeDo: 'What We Do',
   initiatives: 'Initiatives',
+  initiativesHeadline: 'Ideas that become a team',
+  initiativesIntro:
+    'Spaces to build, learn, and prepare together for what comes after college.',
+  initiativesParticipate: 'Participate',
+  initiativesStackWorksTitle: 'StackWorks',
+  initiativesStackWorksDescription:
+    'The chapter’s planning and building arm. We work in two-week sprints, with a public board and open-source code.',
+  initiativesWorkshopsTitle: 'Technical workshops',
+  initiativesWorkshopsDescription:
+    'Git and GitHub, web fundamentals, algorithms, and technical interview practice.',
+  initiativesMentorshipTitle: 'Mentorship and community',
+  initiativesMentorshipDescription:
+    'UPRM alumni support students throughout the semester, sharing experiences and guidance.',
+  initiativesCareerTitle: 'Career preparation',
+  initiativesCareerDescription:
+    'Résumé clinics, mock interviews, and guidance on applying for internships on time.',
   events: 'Events',
   sponsors: 'Sponsors',
   notFound: '404 — Page not found',
