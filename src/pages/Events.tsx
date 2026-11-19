@@ -1,21 +1,53 @@
+import { useMemo } from 'react'
 import Container from '../components/Container'
 import EventRow, { type EventRowItem } from '../components/EventRow'
 import Heading from '../components/Heading'
+import { events as configuredEvents } from '../config/events'
+import useNow from '../hooks/useNow'
 import { useTranslation } from '../i18n/useTranslation'
+import {
+  checkEvents,
+  formatEventDate,
+  isPastEvent,
+  type EventEntry,
+} from '../lib/events'
 
 // Same in both languages, so it isn't a translation key.
 const instagramHandle = '@colorstackuprm'
 
-type EventsProps = {
-  /**
-   * Agenda rows in display order: newest start date first, so upcoming events
-   * sit at the top and past events follow. With none, the empty state is shown.
-   */
-  events?: readonly EventRowItem[]
+function reportProblems(errors: string[]) {
+  if (errors.length === 0) return
+  const message = `Check src/config/events.ts (see docs/EVENTS.md):\n- ${errors.join('\n- ')}`
+  if (import.meta.env.DEV) throw new Error(message)
+  console.error(message)
 }
 
-export default function Events({ events = [] }: EventsProps) {
-  const { t } = useTranslation()
+type EventsProps = {
+  entries?: readonly EventEntry[]
+}
+
+export default function Events({ entries = configuredEvents }: EventsProps) {
+  const { t, language } = useTranslation()
+
+  const { events, errors } = useMemo(() => checkEvents(entries), [entries])
+  reportProblems(errors)
+  const endTimes = useMemo(() => events.map(({ endMs }) => endMs), [events])
+  const now = useNow(endTimes)
+
+  const rows = events.map((event): EventRowItem => {
+    const isPast = isPastEvent(event, now)
+    const actionKey =
+      event.action ?? (event.href ? 'eventsActionReserve' : undefined)
+    return {
+      id: event.id,
+      ...formatEventDate(event, language),
+      title: event.title[language],
+      location: event.location,
+      actionLabel: actionKey && t(actionKey),
+      actionHref: event.href,
+      isPast,
+    }
+  })
 
   return (
     <section aria-labelledby="events" className="bg-surface-alt py-16 md:py-24">
@@ -47,9 +79,9 @@ export default function Events({ events = [] }: EventsProps) {
         </div>
 
         <div className="mt-12 border-t border-chapter-dark lg:mt-16">
-          {events.length > 0 ? (
+          {rows.length > 0 ? (
             <ol className="list-none p-0">
-              {events.map((event) => (
+              {rows.map((event) => (
                 <EventRow key={event.id} event={event} />
               ))}
             </ol>
