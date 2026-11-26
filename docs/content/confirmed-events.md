@@ -1,35 +1,34 @@
 # Events content (Fall 2026)
 
-Confirmed event details for the agenda. Entering this into the events data,
-and working out past and upcoming status automatically, is the job of the events data
-issue. This file is the source content only.
+Confirmed event details for the agenda. This content now lives in
+`src/config/events.ts`; edit that file to change the live agenda (see
+[EVENTS.md](../EVENTS.md)). This file is the original source content only.
 
 All dates are from this fall semester (2026) and all times are AST. Rows are listed in
 display order (see Display notes). Status values reflect the original November 4–5
 planning snapshot, not the current date; derive live status from confirmed event
 start/end timestamps when integrating the data.
 
-| Date      | Time     | Title (ES)                                                                    | Title (EN)                                              | Location | Action key                | Status   |
-| --------- | -------- | ----------------------------------------------------------------------------- | ------------------------------------------------------- | -------- | ------------------------- | -------- |
-| Nov 5     | 5:00 PM  | Taller de código abierto                                                      | Open Source Workshop                                    | S-229    | `eventsActionBringLaptop` | Upcoming |
-| Nov 4     | 6:00 PM  | Sesión de estudio: examen de Estructuras de Datos                             | Study Session: Data Structures Exam                     | S-227    | `eventsActionBringLaptop` | Upcoming |
-| Nov 3     | 6:30 PM  | LeetStack: árboles, backtracking y grafos                                     | LeetStack: Trees, Backtracking and Graphs               | S-227    | `eventsActionBringLaptop` | Upcoming |
-| Oct 27    | —        | LeetStack: listas enlazadas y pilas                                           | LeetStack: Linked Lists and Stacks                      | S-204    | —                         | Past     |
-| Oct 27    | —        | Sesión de estudio: examen de Programación Avanzada                            | Study Session: Advanced Programming Exam                | S-205    | —                         | Past     |
-| Oct 15    | —        | Guía de manejo de proyectos                                                   | Project Management Guide                                | S-227    | —                         | Past     |
-| Oct 8–16  | —        | Ultimate Game 2.0                                                             | Ultimate Game 2.0                                       | S-105A   | —                         | Past     |
-| Oct 8     | —        | Noche de juegos                                                               | Game Night                                              | S-227        | —                     | Past     |
-| Oct 7     | —        | Sesión de estudio: examen de Programación Avanzada                            | Study Session: Advanced Programming Exam                | S-227    | —                         | Past     |
-| Oct 6     | —        | Sesión de estudio: examen de Estructuras de Datos                             | Study Session: Data Structures Exam                     | S-227    | —                         | Past     |
-| Sep 29    | —        | LeetStack: dos punteros y ventana deslizante                                  | LeetStack: Two Pointer and Sliding Window               | S-105A   | —                         | Past     |
-| Sep 28    | —        | Taller de introducción al desarrollo de videojuegos                           | Intro to Game Dev Workshop                              | S-105C   | —                         | Past     |
-| Sep 24    | —        | Taller de elevator pitch                                                      | Elevator Pitch Workshop                                 | S-105A   | —                         | Past     |
-| Sep 21    | —        | Taller de preparación para la feria de empleo                                 | Job Fair Prep Workshop                                  | AE-203   | —                         | Past     |
-| Sep 17    | —        | Taller de Git y GitHub                                                        | Git & GitHub Workshop                                   | S-105A   | —                         | Past     |
-| Sep 10    | —        | Sesión de estudio: examen de Estructuras de Datos                             | Study Session: Data Structures Exam                     | CE-412   | —                         | Past     |
-| Sep 8     | —        | De jugadores a creadores: explorando STEM a través del diseño de videojuegos  | Players to Creators: Exploring STEM Through Game Design | S-229    | —                         | Past     |
-| Sep 1     | —        | Taller de introducción a Linux                                                | Intro to Linux Workshop                                 | S-113    | —                         | Past     |
-
+| Date     | Time    | Title (ES)                                                                   | Title (EN)                                              | Location | Action key                | Status   |
+| -------- | ------- | ---------------------------------------------------------------------------- | ------------------------------------------------------- | -------- | ------------------------- | -------- |
+| Nov 5    | 5:00 PM | Taller de código abierto                                                     | Open Source Workshop                                    | S-229    | `eventsActionBringLaptop` | Upcoming |
+| Nov 4    | 6:00 PM | Sesión de estudio: examen de Estructuras de Datos                            | Study Session: Data Structures Exam                     | S-227    | `eventsActionBringLaptop` | Upcoming |
+| Nov 3    | 6:30 PM | LeetStack: árboles, backtracking y grafos                                    | LeetStack: Trees, Backtracking and Graphs               | S-227    | `eventsActionBringLaptop` | Upcoming |
+| Oct 27   | —       | LeetStack: listas enlazadas y pilas                                          | LeetStack: Linked Lists and Stacks                      | S-204    | —                         | Past     |
+| Oct 27   | —       | Sesión de estudio: examen de Programación Avanzada                           | Study Session: Advanced Programming Exam                | S-205    | —                         | Past     |
+| Oct 15   | —       | Guía de manejo de proyectos                                                  | Project Management Guide                                | S-227    | —                         | Past     |
+| Oct 8–16 | —       | Ultimate Game 2.0                                                            | Ultimate Game 2.0                                       | S-105A   | —                         | Past     |
+| Oct 8    | —       | Noche de juegos                                                              | Game Night                                              | S-227    | —                         | Past     |
+| Oct 7    | —       | Sesión de estudio: examen de Programación Avanzada                           | Study Session: Advanced Programming Exam                | S-227    | —                         | Past     |
+| Oct 6    | —       | Sesión de estudio: examen de Estructuras de Datos                            | Study Session: Data Structures Exam                     | S-227    | —                         | Past     |
+| Sep 29   | —       | LeetStack: dos punteros y ventana deslizante                                 | LeetStack: Two Pointer and Sliding Window               | S-105A   | —                         | Past     |
+| Sep 28   | —       | Taller de introducción al desarrollo de videojuegos                          | Intro to Game Dev Workshop                              | S-105C   | —                         | Past     |
+| Sep 24   | —       | Taller de elevator pitch                                                     | Elevator Pitch Workshop                                 | S-105A   | —                         | Past     |
+| Sep 21   | —       | Taller de preparación para la feria de empleo                                | Job Fair Prep Workshop                                  | AE-203   | —                         | Past     |
+| Sep 17   | —       | Taller de Git y GitHub                                                       | Git & GitHub Workshop                                   | S-105A   | —                         | Past     |
+| Sep 10   | —       | Sesión de estudio: examen de Estructuras de Datos                            | Study Session: Data Structures Exam                     | CE-412   | —                         | Past     |
+| Sep 8    | —       | De jugadores a creadores: explorando STEM a través del diseño de videojuegos | Players to Creators: Exploring STEM Through Game Design | S-229    | —                         | Past     |
+| Sep 1    | —       | Taller de introducción a Linux                                               | Intro to Linux Workshop                                 | S-113    | —                         | Past     |
 
 ## Action labels
 
@@ -65,7 +64,6 @@ Past events never show an action, so the past events above don't need one.
 
 ## Publication
 
-The agenda components are ready for data integration, but are not mounted on the
-homepage and Events navigation remains unavailable. Publish them together with
-the confirmed event data so the live site does not claim this semester has no
-events.
+The agenda is mounted on the homepage at `/#events` and Events navigation is
+enabled. Past and upcoming status is worked out from the start/end times in
+`src/config/events.ts`.

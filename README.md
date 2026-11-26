@@ -47,6 +47,7 @@ branch naming, commit conventions, and the merge policy. Short version: never pu
 to `main`, one issue per branch per PR, and only the Lead merges.
 
 For bilingual content, see [Adding translations](docs/TRANSLATIONS.md).
+To add or change events, see [Updating the events agenda](docs/EVENTS.md).
 
 For the proposed board page layouts and pending content requirements, see the
 [Directiva design handoff](docs/DIRECTIVA.md).

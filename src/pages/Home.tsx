@@ -2,6 +2,7 @@ import Hero from '../components/Hero'
 import About from './About'
 import WhatWeDo from './WhatWeDo'
 import Initiatives from './Initiatives'
+import Events from './Events'
 import { useTranslation } from '../i18n/useTranslation'
 import Button from '../components/Button'
 import HeroCards from '../components/HeroCards'
@@ -78,6 +79,7 @@ export default function Home() {
       {/* What We Do section */}
       <WhatWeDo />
       <Initiatives />
+      <Events />
 
     </>
   )

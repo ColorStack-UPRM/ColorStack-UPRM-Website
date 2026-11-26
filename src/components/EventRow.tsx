@@ -1,9 +1,5 @@
 import { useTranslation } from '../i18n/useTranslation'
 
-// Display-ready values for one agenda row. Every string arrives already
-// translated and formatted; this component only handles layout. Building
-// these values from the events data (dates, timezone, past status, links)
-// is the job of the events data issue.
 export type EventRowItem = {
   id: string
   /** Machine-readable value for <time>, e.g. '2026-08-25'. */
@@ -24,6 +20,7 @@ export type EventRowItem = {
   location: string
   /** Registration action. Ignored when the event is past. */
   actionLabel?: string
+  actionHref?: string
   isPast?: boolean
 }
 
@@ -34,6 +31,7 @@ type EventRowProps = {
 export default function EventRow({ event }: EventRowProps) {
   const { t } = useTranslation()
   const {
+    id,
     dateTime,
     month,
     day,
@@ -44,9 +42,11 @@ export default function EventRow({ event }: EventRowProps) {
     title,
     location,
     actionLabel,
+    actionHref,
     isPast,
   } = event
   const showTime = Boolean(time) && !isPast
+  const titleId = `event-${id}-title`
 
   return (
     <li
@@ -91,6 +91,7 @@ export default function EventRow({ event }: EventRowProps) {
       </time>
 
       <h3
+        id={titleId}
         className={`
           col-start-2 row-start-1 min-w-0
           text-lg leading-tight tracking-tight uppercase
@@ -136,6 +137,25 @@ export default function EventRow({ event }: EventRowProps) {
           >
             {t('eventsPastLabel')}
           </span>
+        ) : actionLabel && actionHref ? (
+          <a
+            href={actionHref}
+            aria-describedby={titleId}
+            className="
+              inline-flex min-h-11 items-center
+              font-stackworks text-xs leading-relaxed font-bold
+              tracking-widest text-balance uppercase text-chapter-dark
+              underline-offset-4 hover:underline
+              focus-visible:outline-2 focus-visible:outline-offset-4
+              focus-visible:outline-chapter-dark
+              lg:text-sm
+            "
+          >
+            {actionLabel}
+            <span aria-hidden="true" className="ml-2 text-accent">
+              →
+            </span>
+          </a>
         ) : (
           actionLabel && (
             <span
@@ -146,9 +166,6 @@ export default function EventRow({ event }: EventRowProps) {
               "
             >
               {actionLabel}
-              <span aria-hidden="true" className="ml-2 text-accent">
-                →
-              </span>
             </span>
           )
         )}
